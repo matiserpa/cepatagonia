@@ -446,14 +446,25 @@ Ubicación: dentro de <section class="video-section">
 Acción: REEMPLAZA el iframe anterior
 ===================================================== -->
 
+<!-- =====================================================
+[VIDEO YOUTUBE – IFRAME FUNCIONANDO + AUTOPLAY MUTE]
+Archivo: index.html
+Ubicación: dentro de <div class="video-wrapper">
+Acción: REEMPLAZAR el <iframe> actual por este
+===================================================== -->
+
 <div class="video-wrapper">
   <iframe
-    src="https://www.youtube.com/embed/wayIo1XXwbw?autoplay=1&mute=1&playsinline=1&rel=0"
+    src="https://www.youtube-nocookie.com/embed/wayIo1XXwbw?autoplay=1&mute=1&playsinline=1&rel=0"
     title="Video Congreso Estética Patagonia"
-    allow="autoplay; encrypted-media; picture-in-picture"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
   </iframe>
 </div>
+
+<!-- =============== FIN [VIDEO YOUTUBE] ================= -->
+
 
 <!-- =============== FIN VIDEO YOUTUBE ================= -->
 
@@ -503,6 +514,7 @@ Acción: REEMPLAZA el iframe anterior
 </body>
 
 </html>
+
 
 
 
