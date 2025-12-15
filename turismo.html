@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recomendaciones Turísticas – CEPATAGONIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --fuente-titulos: "Playfair Display", serif;
+      --fuente-texto: "Montserrat", sans-serif;
+      --color-principal: #6B8F71;
+      --color-fondo: #F6F4EB;
+      --color-blanco: #ffffff;
+      --color-texto: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--fuente-texto);
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+    }
+
+    /* ================= HEADER (VERDE SÓLIDO UNIFICADO) ================= */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-principal);
+      z-index: 100;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+
+    .header-inner {
+      max-width: 1250px;
+      margin: auto;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-box img {
+      height: 118px;
+      width: auto;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      color: var(--color-blanco);
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      opacity: .85;
+    }
+
+    /* ================= CONTENIDO ================= */
+    .page-wrapper {
+      max-width: 1000px;
+      margin: 170px auto 80px;
+      padding: 40px 30px;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--color-principal);
+      font-family: var(--fuente-titulos);
+      font-size: 2.1rem;
+      margin-bottom: 30px;
+    }
+
+    .tour-card {
+      background: var(--color-fondo);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    .tour-card h3 {
+      font-size: 1.1rem;
+      color: var(--color-principal);
+      margin-bottom: 6px;
+      font-family: var(--fuente-titulos);
+    }
+
+    .tour-card p {
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        padding: 8px 14px;
+      }
+
+      nav ul {
+        gap: 10px;
+        font-size: 0.85rem;
+      }
+
+      .page-wrapper {
+        margin: 155px 18px 50px;
+        padding: 28px 20px;
+      }
+    }
+/* ========= AJUSTES GENERALES MOBILE ========= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Evitar scroll horizontal raro */
+body {
+  overflow-x: hidden;
+}
+
+/* Header más amigable en cel */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 8px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .logo-box img {
+    height: 80px; /* más chico en móvil */
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  /* Margen superior del contenido un poco menor */
+  .page-wrapper {
+    margin-top: 145px !important;
+  }
+}
+/* === Ajuste extra de separación en versión móvil === */
+@media (max-width: 768px) {
+  .page-wrapper {
+    margin-top: 200px !important; /* Aumentamos la separación */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-box">
+        <a href="index.html#inicio">
+          <img src="LogoEsteticaB.png" alt="Logo CEPATAGONIA" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html#inicio">INICIO</a></li>
+          <li><a href="programa.html">PROGRAMA</a></li>
+          <li><a href="informacion.html">INFORMACIÓN</a></li>
+          <li><a href="expositores.html">EXPOSITORES</a></li>
+          <li><a href="turismo.html">RECOMENDACIONES TURÍSTICAS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ============ FIN HEADER ============ -->
+
+  <!-- ================= CONTENIDO TURISMO ================= -->
+  <main class="page-wrapper">
+    <h1 class="section-title">Recomendaciones Turísticas</h1>
+
+    <div class="tour-card">
+      <h3>Centro de San Martín de los Andes</h3>
+      <p>Un paseo por el casco céntrico, con cafeterías, locales gastronómicos y comercios típicos de montaña.</p>
+    </div>
+
+    <div class="tour-card">
+      <h3>Lago Lácar y Costanera</h3>
+      <p>Ideal para caminatas, fotos y contemplar el paisaje a pocos minutos de la sede del congreso.</p>
+    </div>
+
+    <div class="tour-card">
+      <h3>Camino de los Siete Lagos</h3>
+      <p>Excursión emblemática de la región, con vistas panorámicas y lagos de aguas cristalinas.</p>
+    </div>
+
+    <div class="tour-card">
+      <h3>Mirador Bandurrias</h3>
+      <p>Un punto panorámico con vista al Lago Lácar y al centro de San Martín de los Andes.</p>
+    </div>
+
+    <div class="tour-card">
+      <h3>Lago Huechulafquen</h3>
+      <p>Excursión a uno de los lagos más hermosos del Parque Nacional Lanín.</p>
+    </div>
+  </main>
+  <!-- ============ FIN CONTENIDO TURISMO ============ -->
+
+</body>
+
+</html>

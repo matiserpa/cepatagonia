@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CEPATAGONIA – Congreso de Estética de la Patagonia 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --fuente-titulos: "Playfair Display", serif;
+      --fuente-texto: "Montserrat", sans-serif;
+
+      --color-principal: #6B8F71;
+      --color-secundario: #A1B2A3;
+      --color-fondo: #F6F4EB;
+      --color-texto: #333;
+      --color-blanco: #ffffff;
+
+      --verde-profundo: #3B4F3E;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--fuente-texto);
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+    }
+
+    /* ================= HEADER (BLUR APPLE SOLO EN INDEX) ================= */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: transparent;
+      backdrop-filter: saturate(180%) blur(18px);
+      -webkit-backdrop-filter: saturate(180%) blur(18px);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    header.scrolled {
+      background-color: var(--color-principal);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+
+    .header-inner {
+      max-width: 1250px;
+      margin: auto;
+      padding: 6px 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-box img {
+      height: 92px;
+      width: auto;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      color: var(--color-blanco);
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      opacity: .85;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      height: 92vh;
+      background: url("DJI_0215.jpg") top center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      padding-top: 110px;
+      overflow: hidden;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.15);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .hero-content h3 {
+      font-family: var(--fuente-titulos);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content h1 {
+      font-family: var(--fuente-titulos);
+      font-size: 3.6rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .hero-content h4 {
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    /* ================= INTRO ================= */
+    .intro-section {
+      background-color: var(--color-fondo);
+      padding: 55px 0 65px;
+      margin-top: -40px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      border-bottom-left-radius: 70px;
+      border-bottom-right-radius: 70px;
+    }
+
+    .intro-wrap {
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(to bottom,
+          rgba(255, 255, 255, 0.92),
+          rgba(238, 238, 238, 0.92));
+      border-radius: 36px;
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
+      padding: 60px 30px 50px;
+      text-align: center;
+    }
+
+    .intro-wrap h2 {
+      font-family: var(--fuente-titulos);
+      font-size: 2.1rem;
+      color: var(--color-principal);
+    }
+
+    .intro-wrap p {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #555;
+      margin: 18px 0;
+    }
+
+    .save {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .btn-box {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 17px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 30px;
+      border: 2px solid var(--color-principal);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+    }
+
+    .btn.primary {
+      background-color: var(--color-principal);
+      color: white;
+    }
+
+    .btn.primary:hover {
+      background: #557a5e;
+    }
+
+    .btn.secondary {
+      background-color: white;
+      color: var(--color-principal);
+    }
+
+    .btn.secondary:hover {
+      background: var(--color-principal);
+      color: white;
+    }
+
+    /* ================= VIDEO ================= */
+    .video-section {
+      max-width: 1100px;
+      margin: 55px auto;
+      padding: 20px;
+      border-radius: 35px;
+      background-color: var(--color-fondo);
+      text-align: center;
+    }
+
+    .video-title {
+      font-family: var(--fuente-titulos);
+      font-size: 1.55rem;
+      color: var(--verde-profundo);
+      background: rgba(255, 255, 255, 0.55);
+      padding: 12px 26px;
+      border-radius: 18px;
+      display: inline-block;
+      margin-bottom: 25px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* ================= PROPUESTA DE VALOR ================= */
+    .valor-section {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+      text-align: left;
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--verde-profundo);
+      font-family: var(--fuente-texto);
+    }
+
+    .valor-section strong {
+      color: var(--color-principal);
+      font-weight: 700;
+    }
+/* ========= AJUSTES GENERALES MOBILE ========= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Evitar scroll horizontal raro */
+body {
+  overflow-x: hidden;
+}
+
+/* Header más amigable en cel */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 8px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .logo-box img {
+    height: 80px; /* más chico en móvil */
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  /* Margen superior del contenido un poco menor */
+  .page-wrapper {
+    margin-top: 145px !important;
+  }
+}
+/* ========= AJUSTES GENERALES MOBILE ========= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Evitar scroll horizontal raro */
+body {
+  overflow-x: hidden;
+}
+
+/* Header más amigable en cel */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 8px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .logo-box img {
+    height: 80px; /* más chico en móvil */
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  /* Margen superior del contenido un poco menor */
+  .page-wrapper {
+    margin-top: 145px !important;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header id="header">
+    <div class="header-inner">
+      <div class="logo-box">
+        <a href="index.html#inicio">
+          <img src="LogoEsteticaB.png" alt="Logo" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html#inicio">INICIO</a></li>
+          <li><a href="programa.html">PROGRAMA</a></li>
+          <li><a href="informacion.html">INFORMACIÓN</a></li>
+          <li><a href="expositores.html">EXPOSITORES</a></li>
+          <li><a href="turismo.html">RECOMENDACIONES TURÍSTICAS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ============ FIN HEADER ============ -->
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h3>1ra EDICIÓN</h3>
+      <h1>BIENVENIDOS</h1>
+      <h4>Congreso de Estética de la Patagonia 2026</h4>
+    </div>
+  </section>
+  <!-- ============ FIN HERO ============ -->
+
+  <!-- ================= INTRO ================= -->
+  <section class="intro-section">
+    <div class="intro-wrap">
+      <h2>10 y 11 de Octubre 2026</h2>
+      <p>Donde la ciencia y la estética se encuentran para regenerar el futuro.</p>
+      <div class="save">SAVE THE DATE</div>
+
+      <div class="btn-box">
+        <button class="btn primary">ADQUIRÍ TU PASE</button>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/5491131888164?text=Hola%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20el%20Congreso"
+          target="_blank" class="btn secondary">
+          ASESORATE
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- ============ FIN INTRO ============ -->
+
+  <!-- ================= VIDEO ================= -->
+  <section class="video-section">
+    <h2 class="video-title">Conocé un poco del entorno del congreso</h2>
+
+    <video autoplay muted loop playsinline style="width:100%; border-radius:25px;">
+      <source src="DJI_20251023140122_0553_D.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </section>
+  <!-- ============ FIN VIDEO ============ -->
+
+  <!-- ================= PROPUESTA DE VALOR ================= -->
+  <section class="valor-section">
+    <p>
+      El Congreso de Estética de la Patagonia marca un punto de inflexión en la profesión: mientras la estética
+      tradicional se enfocó en la superficie, este encuentro pone el foco donde realmente comienza todo: las células.
+    </p>
+
+    <p>
+      Aquí nace la nueva era de la Estética Celular Avanzada, donde la ciencia, la innovación y la biología cutánea
+      redefinen los resultados posibles en un gabinete.
+    </p>
+
+    <p>
+      Exploramos tecnologías que actúan a nivel molecular, avances en medicina regenerativa, biorregeneración y
+      técnicas no invasivas que hoy están transformando el futuro de la estética.
+    </p>
+
+    <p>
+      Este Congreso no es solo capacitación: es una plataforma para potenciar tu crecimiento profesional y
+      posicionarte en la próxima generación de la estética.
+    </p>
+
+    <p><strong>Networking con líderes:</strong> conectá con referentes, expertos y empresas clave.</p>
+    <p><strong>Oportunidades de negocio:</strong> ampliá tu red y generá alianzas estratégicas que impulsan tus
+      ventas.</p>
+    <p><strong>Validación profesional:</strong> obtené un Diploma de Asistencia que te destaca y respalda tus nuevas
+      habilidades.</p>
+  </section>
+  <!-- ============ FIN PROPUESTA DE VALOR ============ -->
+
+  <script>
+    // EFECTO APPLE EN HEADER
+    window.addEventListener("scroll", function () {
+      const header = document.getElementById("header");
+      header.classList.toggle("scrolled", window.scrollY > 40);
+    });
+  </script>
+
+</body>
+
+</html>
