@@ -37,61 +37,10 @@
       background-color: var(--color-fondo);
       color: var(--color-texto);
     }
+<!-- ===================== HEADER PLACEHOLDER ===================== -->
+<div id="header-placeholder"></div>
+<!-- =================== FIN HEADER PLACEHOLDER =================== -->
 
-    /* ================= HEADER (BLUR APPLE SOLO EN INDEX) ================= */
-    header {
-
-      padding: 0 !important;       /* por si el header tiene padding extra */
-      }
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 999;
-      background-color: transparent;
-      backdrop-filter: saturate(180%) blur(18px);
-      -webkit-backdrop-filter: saturate(180%) blur(18px);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    header.scrolled {
-      background-color: var(--color-principal);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-    }
-
-    .header-inner {
-      max-width: 1250px;
-      margin: auto;
-      padding: 4px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo-box img {
-      height: 118px;
-      width: auto;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 22px;
-      list-style: none;
-      align-items: center;
-    }
-
-    nav a {
-      font-size: 0.95rem;
-      color: var(--color-blanco);
-      text-decoration: none;
-      font-weight: 400;
-      letter-spacing: 0.5px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-      opacity: .85;
-    }
 
     /* =====================================================
 [LOGO – FONDO GLASS]
@@ -533,6 +482,7 @@ Ubicación: dentro de <section class="video-section">
 </body>
 
 </html>
+
 
 
 
