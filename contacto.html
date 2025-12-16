@@ -222,6 +222,36 @@ body {
     margin-top: 200px !important; /* Aumentamos la separación */
   }
 }
+/* =====================================================
+[HEADER – ACHICAR BANDA VERDE SIN ACHICAR LOGO]
+Pegar AL FINAL del CSS en TODAS las páginas
+===================================================== */
+
+/* 1) Achica la altura del header (la franja verde) */
+.header-inner{
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* 2) Mantiene el tamaño del logo (no lo achiques) */
+.logo-box img{
+  height: 92px !important;   /* ← si tu tamaño anterior era otro, decime y lo ajusto */
+  width: auto !important;
+}
+
+/* 3) Mobile: achica franja verde, pero conserva el logo (solo un poquito menor) */
+@media (max-width: 768px){
+  .header-inner{
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+
+  .logo-box img{
+    height: 92px !important; /* si querés apenas menor en celu, poné 86px */
+  }
+}
+
+/* ================= FIN HEADER ================= */
 
   </style>
 </head>
@@ -320,3 +350,4 @@ body {
 </body>
 
 </html>
+
