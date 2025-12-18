@@ -1,541 +1,98 @@
 <!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CEPATAGONIA – Congreso de Estética de la Patagonia 2026</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CEPATAGONIA – Congreso de Estética de la Patagonia 2026</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
 
-  <style>
-    :root {
-      --fuente-titulos: "Playfair Display", serif;
-      --fuente-texto: "Montserrat", sans-serif;
-
-      --color-principal: #6B8F71;
-      --color-secundario: #A1B2A3;
-      --color-fondo: #F6F4EB;
-      --color-texto: #333;
-      --color-blanco: #ffffff;
-
-      --verde-profundo: #3B4F3E;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--fuente-texto);
-      background-color: var(--color-fondo);
-      color: var(--color-texto);
-    }
-
-
-
-
-
-    /* =====================================================
-[LOGO – FONDO GLASS]
-===================================================== */
-
-.logo {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  padding: 10px 18px;
-  border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-/* ================= FIN LOGO GLASS ================= */
-
-
-    /* ================= HERO ================= */
-    .hero {
-      height: 92vh;
-      background: url("DJI_0215.jpg") top center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      color: white;
-      padding-top: 110px;
-      overflow: hidden;
-    }
-
-    .hero-overlay {
-      background: rgba(0, 0, 0, 0.15);
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      text-align: center;
-      z-index: 10;
-    }
-
-    .hero-content h3 {
-      font-family: var(--fuente-titulos);
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-content h1 {
-      font-family: var(--fuente-titulos);
-      font-size: 3.6rem;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    .hero-content h4 {
-      font-size: 1.1rem;
-      font-weight: 300;
-    }
-
-    /* ================= INTRO ================= */
-    .intro-section {
-      background-color: var(--color-fondo);
-      padding: 55px 0 65px;
-      margin-top: -40px;
-      border-top-left-radius: 50px;
-      border-top-right-radius: 50px;
-      border-bottom-left-radius: 70px;
-      border-bottom-right-radius: 70px;
-    }
-
-    .intro-wrap {
-      max-width: 900px;
-      margin: auto;
-      background: linear-gradient(to bottom,
-          rgba(255, 255, 255, 0.92),
-          rgba(238, 238, 238, 0.92));
-      border-radius: 36px;
-      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
-      padding: 60px 30px 50px;
-      text-align: center;
-    }
-
-    .intro-wrap h2 {
-      font-family: var(--fuente-titulos);
-      font-size: 2.1rem;
-      color: var(--color-principal);
-    }
-
-    .intro-wrap p {
-      font-family: "Playfair Display", serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      color: #555;
-      margin: 18px 0;
-    }
-
-    .save {
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 25px;
-    }
-
-    .btn-box {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-      gap: 17px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 28px;
-      border-radius: 30px;
-      border: 2px solid var(--color-principal);
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.2s;
-    }
-
-    .btn.primary {
-      background-color: var(--color-principal);
-      color: white;
-    }
-
-    .btn.primary:hover {
-      background: #557a5e;
-    }
-
-    .btn.secondary {
-      background-color: white;
-      color: var(--color-principal);
-    }
-
-    .btn.secondary:hover {
-      background: var(--color-principal);
-      color: white;
-    }
-
-    /* =====================================================
-[VIDEO YOUTUBE – CONTENEDOR RESPONSIVE]
-===================================================== */
-.video-wrapper {
-  width: 100%;
-  max-width: 100%;
-  aspect-ratio: 16 / 9;
-  margin: 0 auto;
-}
-
-/* =====================================================
-[VIDEO YOUTUBE – IFRAME]
-===================================================== */
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: none;
-  border-radius: 25px;
-}
-/* ================= FIN VIDEO YOUTUBE ================= */
-
-
-    /* ================= VIDEO ================= */
-    .video-section {
-      max-width: 1100px;
-      margin: 55px auto;
-      padding: 20px;
-      border-radius: 35px;
-      background-color: var(--color-fondo);
-      text-align: center;
-    }
-
-    .video-title {
-      font-family: var(--fuente-titulos);
-      font-size: 1.55rem;
-      color: var(--verde-profundo);
-      background: rgba(255, 255, 255, 0.55);
-      padding: 12px 26px;
-      border-radius: 18px;
-      display: inline-block;
-      margin-bottom: 25px;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-    /* ================= PROPUESTA DE VALOR ================= */
-    .valor-section {
-      max-width: 900px;
-      margin: 40px auto 80px;
-      padding: 0 20px;
-      text-align: left;
-      font-size: 1.15rem;
-      line-height: 1.65;
-      color: var(--verde-profundo);
-      font-family: var(--fuente-texto);
-    }
-
-    .valor-section strong {
-      color: var(--color-principal);
-      font-weight: 700;
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
-
-/* Evitar scroll horizontal raro */
-body {
-  overflow-x: hidden;
-}
-
-/* Header más amigable en cel */
-@media (max-width: 768px) {
-  .header-inner {
-    padding: 8px 14px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .logo-box img {
-    height: 80px; /* más chico en móvil */
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.8rem;
-  }
-
-  /* Margen superior del contenido un poco menor */
-  .page-wrapper {
-    margin-top: 145px !important;
-  }
-}
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Evitar scroll horizontal raro */
-body {
-  overflow-x: hidden;
-}
-
-/* Header más amigable en cel */
-@media (max-width: 768px) {
-  .header-inner {
-    padding: 8px 14px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .logo-box img {
-    height: 80px; /* más chico en móvil */
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.8rem;
-  }
-
-  /* Margen superior del contenido un poco menor */
-  .page-wrapper {
-    margin-top: 145px !important;
-  }
-}
-/* =====================================================
-[VIMEO/VIDEO – TAMAÑO MÁS CHICO + RESPONSIVE]
-Archivo: CSS principal (o <style> en index.html)
-Ubicación: PEGAR AL FINAL
-Objetivo:
-- Que el video no sea tan alto en desktop (evitar scroll)
-- Mantener buena visual en mobile
-===================================================== */
-
-/* Contenedor base (si ya existe, este bloque lo ajusta sin romper) */
-.video-wrapper{
-  width: 100%;
-  margin: 0 auto;
-  aspect-ratio: 16 / 9;
-}
-
-/* Achicar SOLO este video (desktop) */
-.video-wrapper--small{
-  max-width: 820px;      /* ajustá 700–900 según tu gusto */
-  aspect-ratio: 21 / 9;  /* menos alto que 16:9 (más “banner”) */
-}
-
-/* Iframe siempre ocupa el contenedor */
-.video-wrapper iframe{
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: none;
-  border-radius: 25px;   /* mantiene tu estética */
-}
-
-/* Mobile: vuelve a 16:9 para que se vea mejor y más legible */
-@media (max-width: 768px){
-  .video-wrapper--small{
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-}
-
-/* ================= FIN [VIDEO RESPONSIVE] ================= */
-
-
-/* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header{
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.header-inner{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.logo-box img{
-  height: 118px;
-  width: auto;
-  display: block;
-}
-
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-nav a{
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
-}
-
-nav a:hover{
-  opacity: 0.8;
-}
-/* ====================== FIN HEADER (BASE) ====================== */
-</style>
-</head>
-
+<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/index.css" rel="stylesheet"/><script defer src="main.js"></script></head>
 <body>
+<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
 
-  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-  <!-- Función: carga header.html para no repetir código en cada página -->
-  <div id="header-placeholder"></div>
-  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
+<div id="header-placeholder"></div>
+<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+<!-- Función: carga header.html para no repetir código en cada página -->
 
-
-  <!-- ================= HEADER ================= -->
+<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
+<!-- ================= HEADER ================= -->
 <!-- ============ FIN HEADER ============ -->
-
-  <!-- ================= HERO ================= -->
-  <section class="hero" id="inicio">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h3>1ra EDICIÓN</h3>
-      <h1>BIENVENIDOS</h1>
-      <h4>Congreso de Estética de la Patagonia 2026</h4>
-    </div>
-  </section>
-  <!-- ============ FIN HERO ============ -->
-
-  <!-- ================= INTRO ================= -->
-  <section class="intro-section">
-    <div class="intro-wrap">
-      <h2>10 y 11 de Octubre 2026</h2>
-      <p>Donde la ciencia y la estética se encuentran para regenerar el futuro.</p>
-      <div class="save">SAVE THE DATE</div>
-
-      <div class="btn-box">
-        <button class="btn primary">ADQUIRÍ TU PASE</button>
-
-        <!-- WHATSAPP -->
-        <a href="https://wa.me/5491131888164?text=Hola%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20el%20Congreso"
-          target="_blank" class="btn secondary">
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h3>1ra EDICIÓN</h3>
+<h1>BIENVENIDOS</h1>
+<h4>Congreso de Estética de la Patagonia 2026</h4>
+</div>
+</section>
+<!-- ============ FIN HERO ============ -->
+<!-- ================= INTRO ================= -->
+<section class="intro-section">
+<div class="intro-wrap">
+<h2>10 y 11 de Octubre 2026</h2>
+<p>Donde la ciencia y la estética se encuentran para regenerar el futuro.</p>
+<div class="save">SAVE THE DATE</div>
+<div class="btn-box">
+<button class="btn primary">ADQUIRÍ TU PASE</button>
+<!-- WHATSAPP -->
+<a class="btn secondary" href="https://wa.me/5491131888164?text=Hola%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20el%20Congreso" target="_blank">
           ASESORATE
         </a>
-      </div>
-    </div>
-  </section>
-  <!-- ============ FIN INTRO ============ -->
-
- <!-- ========================= [SECCIÓN VIDEO] ========================= -->
+</div>
+</div>
+</section>
+<!-- ============ FIN INTRO ============ -->
+<!-- ========================= [SECCIÓN VIDEO] ========================= -->
 <!-- =====================================================
 [VIMEO – VIDEO PRINCIPAL (AUTOPLAY MUTE + RESPONSIVE)]
 Archivo: index.html
 Ubicación: dentro de <section class="video-section">
 ===================================================== -->
-
 <div class="video-wrapper video-wrapper--small">
-  <iframe
-    src="https://player.vimeo.com/video/1146762024?autoplay=1&muted=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
-    title="Video Congreso Estética Patagonia"
-    allow="autoplay; fullscreen; picture-in-picture"
-    loading="lazy"
-    allowfullscreen>
-  </iframe>
+<iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" loading="lazy" src="https://player.vimeo.com/video/1146762024?autoplay=1&amp;muted=1&amp;loop=1&amp;autopause=0&amp;title=0&amp;byline=0&amp;portrait=0" title="Video Congreso Estética Patagonia">
+</iframe>
 </div>
-
 <!-- =============== FIN [VIDEO VIMEO] ================= -->
-
-
-  <!-- ================= PROPUESTA DE VALOR ================= -->
-  <section class="valor-section">
-    <p>
+<!-- ================= PROPUESTA DE VALOR ================= -->
+<section class="valor-section">
+<p>
       El Congreso de Estética de la Patagonia marca un punto de inflexión en la profesión: mientras la estética
       tradicional se enfocó en la superficie, este encuentro pone el foco donde realmente comienza todo: las células.
     </p>
-
-    <p>
+<p>
       Aquí nace la nueva era de la Estética Celular Avanzada, donde la ciencia, la innovación y la biología cutánea
       redefinen los resultados posibles en un gabinete.
     </p>
-
-    <p>
+<p>
       Exploramos tecnologías que actúan a nivel molecular, avances en medicina regenerativa, biorregeneración y
       técnicas no invasivas que hoy están transformando el futuro de la estética.
     </p>
-
-    <p>
+<p>
       Este Congreso no es solo capacitación: es una plataforma para potenciar tu crecimiento profesional y
       posicionarte en la próxima generación de la estética.
     </p>
-
-    <p><strong>Networking con líderes:</strong> conectá con referentes, expertos y empresas clave.</p>
-    <p><strong>Oportunidades de negocio:</strong> ampliá tu red y generá alianzas estratégicas que impulsan tus
+<p><strong>Networking con líderes:</strong> conectá con referentes, expertos y empresas clave.</p>
+<p><strong>Oportunidades de negocio:</strong> ampliá tu red y generá alianzas estratégicas que impulsan tus
       ventas.</p>
-    <p><strong>Validación profesional:</strong> obtené un Diploma de Asistencia que te destaca y respalda tus nuevas
+<p><strong>Validación profesional:</strong> obtené un Diploma de Asistencia que te destaca y respalda tus nuevas
       habilidades.</p>
-  </section>
-  <!-- ============ FIN PROPUESTA DE VALOR ============ -->
-
-  <script>
+</section>
+<!-- ============ FIN PROPUESTA DE VALOR ============ -->
+<script>
     // EFECTO APPLE EN HEADER
     window.addEventListener("scroll", function () {
       const header = document.getElementById("header");
       header.classList.toggle("scrolled", window.scrollY > 40);
     });
   </script>
+<!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
+<!-- Función: inserta header.html dentro de #header-placeholder -->
 
-
-  <!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
-  <!-- Función: inserta header.html dentro de #header-placeholder -->
-  <script src="main.js" defer></script>
-  <!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
-
+<!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,245 +1,44 @@
 <!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recomendaciones Turísticas – CEPATAGONIA</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-
-  <style>
-    :root {
-      --fuente-titulos: "Playfair Display", serif;
-      --fuente-texto: "Montserrat", sans-serif;
-      --color-principal: #6B8F71;
-      --color-fondo: #F6F4EB;
-      --color-blanco: #ffffff;
-      --color-texto: #333;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--fuente-texto);
-      background-color: var(--color-fondo);
-      color: var(--color-texto);
-    }
-
-  
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recomendaciones Turísticas – CEPATAGONIA</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 
 
-
-
-    /* ================= CONTENIDO ================= */
-    .page-wrapper {
-      max-width: 1000px;
-      margin: 170px auto 80px;
-      padding: 40px 30px;
-      background: #ffffff;
-      border-radius: 32px;
-      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
-    }
-
-    .section-title {
-      text-align: center;
-      color: var(--color-principal);
-      font-family: var(--fuente-titulos);
-      font-size: 2.1rem;
-      margin-bottom: 30px;
-    }
-
-    .tour-card {
-      background: var(--color-fondo);
-      border-radius: 18px;
-      padding: 18px;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-    }
-
-    .tour-card h3 {
-      font-size: 1.1rem;
-      color: var(--color-principal);
-      margin-bottom: 6px;
-      font-family: var(--fuente-titulos);
-    }
-
-    .tour-card p {
-      font-size: 0.96rem;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        padding: 8px 14px;
-      }
-
-      nav ul {
-        gap: 10px;
-        font-size: 0.85rem;
-      }
-
-      .page-wrapper {
-        margin: 155px 18px 50px;
-        padding: 28px 20px;
-      }
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
-
-/* Evitar scroll horizontal raro */
-body {
-  overflow-x: hidden;
-}
-
-/* Header más amigable en cel */
-@media (max-width: 768px) {
-  .header-inner {
-    padding: 8px 14px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .logo-box img {
-    height: 80px; /* más chico en móvil */
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.8rem;
-  }
-
-  /* Margen superior del contenido un poco menor */
-  .page-wrapper {
-    margin-top: 145px !important;
-  }
-}
-/* === Ajuste extra de separación en versión móvil === */
-@media (max-width: 768px) {
-  .page-wrapper {
-    margin-top: 200px !important; /* Aumentamos la separación */
-  }
-}
-
-
-/* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header{
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.header-inner{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.logo-box img{
-  height: 118px;
-  width: auto;
-  display: block;
-}
-
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-nav a{
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
-}
-
-nav a:hover{
-  opacity: 0.8;
-}
-/* ====================== FIN HEADER (BASE) ====================== */
-</style>
-</head>
-
+<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/turismo.css" rel="stylesheet"/><script defer src="main.js"></script></head>
 <body>
+<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
 
-  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-  <!-- Función: carga header.html para no repetir código en cada página -->
-  <div id="header-placeholder"></div>
-  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
+<div id="header-placeholder"></div>
+<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+<!-- Función: carga header.html para no repetir código en cada página -->
 
+<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
+<!-- ================= HEADER ================= -->
 
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="header-inner">
-      <div class="logo-box">
-        <a href="index.html#inicio">
-          <img src="LogoEsteticaB.png" alt="Logo CEPATAGONIA" />
-        </a>
-      </div>
-
-      <nav>
-        <ul>
-          <li><a href="index.html#inicio">INICIO</a></li>
-          <li><a href="programa.html">PROGRAMA</a></li>
-          <li><a href="informacion.html">INFORMACIÓN</a></li>
-          <li><a href="expositores.html">EXPOSITORES</a></li>
-          <li><a href="turismo.html">TURISMO</a></li>
-          <li><a href="contacto.html">CONTACTO</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- ============ FIN HEADER ============ -->
-
-  <!-- ================= CONTENIDO TURISMO ================= -->
-   <main class="page-wrapper">
-    <h1 class="section-title">Turismo · Congreso de Estética de la
+<!-- ============ FIN HEADER ============ -->
+<!-- ================= CONTENIDO TURISMO ================= -->
+<main class="page-wrapper">
+<h1 class="section-title">Turismo · Congreso de Estética de la
 Patagonia 2026
     San Martín de los Andes · Alojamiento · Traslados · Excursiones</h1>
-
-    <div class="tour-card">
-      <h3>San Martín de los Andes: destino sede del Congreso</h3>
-      <p>San Martín de los Andes es uno de los destinos más emblemáticos de la Patagonia
+<div class="tour-card">
+<h3>San Martín de los Andes: destino sede del Congreso</h3>
+<p>San Martín de los Andes es uno de los destinos más emblemáticos de la Patagonia
 argentina. Ubicada a orillas del Lago Lácar y rodeada por el Parque Nacional Lanín,
 combina naturaleza, servicios turísticos de calidad y una propuesta gastronómica
 destacada.
 Sus paisajes, bosques nativos y ambiente cordillerano la convierten en un escenario
 ideal para disfrutar antes, durante y después del Congreso.</p>
-    </div>
-
-    <div class="tour-card">
-      <h3>Alojamiento Oficial del Congreso</h3>
-      <p>Los siguientes establecimientos han sido seleccionados como hoteles oficiales del
+</div>
+<div class="tour-card">
+<h3>Alojamiento Oficial del Congreso</h3>
+<p>Los siguientes establecimientos han sido seleccionados como hoteles oficiales del
 Congreso de Estética de la Patagonia 2026. Todos ofrecen tarifas preferenciales para
 participantes, cupos limitados y servicios orientados al confort del visitante.
 Aquí podrás insertar las imágenes institucionales de cada hotel con su respectivo pie de
@@ -271,11 +70,10 @@ Hostería con tradición en la ciudad, de ambiente cálido y familiar. Ubicada a
 cuadras del centro, ofrece un entorno sereno para descansar después de cada jornada del
 Congreso.
 Servicios destacados: desayuno regional, wifi, salón de estar con chimenea.</p>
-    </div>
-
-    <div class="tour-card">
-      <h3>Traslados Aeropuerto–Hotel–Aeropuerto</h3>
-      <p>Los participantes podrán reservar servicios de traslado privados o compartidos desde y
+</div>
+<div class="tour-card">
+<h3>Traslados Aeropuerto–Hotel–Aeropuerto</h3>
+<p>Los participantes podrán reservar servicios de traslado privados o compartidos desde y
 hacia:
  Aeropuerto Aviador Carlos Campos (Chapelco – CPC)
  Aeropuerto Internacional de Bariloche (BRC)
@@ -285,11 +83,10 @@ Opciones disponibles:
  Servicios compartidos en horarios establecidos
 La reserva se realizará directamente desde esta página mediante un formulario
 habilitado.</p>
-    </div>
-
-    <div class="tour-card">
-      <h3>Excursiones Pre y Post Congreso</h3>
-      <p>San Martín de los Andes ofrece una amplia variedad de actividades para aprovechar la
+</div>
+<div class="tour-card">
+<h3>Excursiones Pre y Post Congreso</h3>
+<p>San Martín de los Andes ofrece una amplia variedad de actividades para aprovechar la
 estadía en la Patagonia. Entre las opciones más destacadas:
  Camino de los Siete Lagos
  Quila Quina + Mirador Bandurrias
@@ -298,21 +95,12 @@ estadía en la Patagonia. Entre las opciones más destacadas:
  Trekking Mirador Arrayanes
  Día en Cerro Chapelco (según temporada)
  Experiencias gastronómicas típicas</p>
-    </div>
+</div>
+</main>
+<!-- ============ FIN CONTENIDO TURISMO ============ -->
+<!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
+<!-- Función: inserta header.html dentro de #header-placeholder -->
 
-  </main>
-  <!-- ============ FIN CONTENIDO TURISMO ============ -->
-
-
-  <!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
-  <!-- Función: inserta header.html dentro de #header-placeholder -->
-  <script src="main.js" defer></script>
-  <!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
-
+<!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
 </body>
-
 </html>
-
-
-
-

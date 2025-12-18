@@ -1,0 +1,190 @@
+/* ===================== */
+/* INICIO CSS PÁGINA: contacto.html */
+/* Función: estilos específicos de esta página */
+/* ===================== */
+
+/* (removido del CSS de página: :root ) */
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }/* (removido del CSS de página: body ) */
+
+
+ 
+
+
+
+
+    /* ================= WRAPPER ================= */
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 140px auto 80px;
+      padding: 40px 28px;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .section-title {
+      font-family: var(--fuente-titulos);
+      font-size: 2rem;
+      color: var(--color-principal);
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 0.98rem;
+      color: #555;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr;
+      gap: 26px;
+      align-items: flex-start;
+    }
+
+    .contact-info p {
+      margin-bottom: 8px;
+      font-size: 0.97rem;
+    }
+
+    .contact-info strong {
+      color: var(--color-principal);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      font-family: var(--fuente-texto);
+    }
+
+    .contact-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      padding: 10px 24px;
+      border-radius: 20px;
+      border: none;
+      background: var(--color-principal);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #557a5e;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-wrapper {
+        margin: 135px 16px 50px;
+        padding: 26px 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        padding: 8px 14px;
+      }
+
+      nav ul {
+        gap: 10px;
+        font-size: 0.85rem;
+      }
+    }
+/* ========= AJUSTES GENERALES MOBILE ========= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
+body ) */
+/* (removido del CSS de página: /* Header más amigable en cel */
+@media (max-width: 768px) ) */
+
+
+/* === Ajuste extra de separación en versión móvil === */
+@media (max-width: 768px) {
+  .page-wrapper {
+    margin-top: 200px !important; /* Aumentamos la separación */
+  }
+}/* (removido del CSS de página: /* =====================================================
+[HEADER – ACHICAR BANDA VERDE SIN ACHICAR LOGO]
+Pegar AL FINAL del CSS en TODAS las páginas
+===================================================== */
+
+/* 1) Achica la altura del header (la franja verde) */
+.header-inner ) */
+/* (removido del CSS de página: /* 2) Mantiene el tamaño del logo (no lo achiques) */
+.logo-box img ) */
+
+
+/* 3) Mobile: achica franja verde, pero conserva el logo (solo un poquito menor) */
+@media (max-width: 768px){
+  .header-inner{
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+
+  .logo-box img{
+    height: 92px !important; /* si querés apenas menor en celu, poné 86px */
+  }
+}/* (removido del CSS de página: /* ================= FIN HEADER ================= */
+
+
+/* ===================== INICIO HEADER (BASE) ===================== */
+/* Función: header fijo con nav consistente en todas las páginas */
+#header ) */
+/* (removido del CSS de página: .header-inner ) */
+/* (removido del CSS de página: .logo-box img ) */
+
+
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a{
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--verde-profundo, #3B4F3E);
+}
+
+nav a:hover{
+  opacity: 0.8;
+}
+/* ====================== FIN HEADER (BASE) ====================== */
+
+/* ===================== */
+/* FIN CSS PÁGINA: contacto.html */
+/* ===================== */

@@ -1,356 +1,60 @@
 <!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto – CEPATAGONIA</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-
-  <style>
-    :root {
-      --fuente-titulos: "Playfair Display", serif;
-      --fuente-texto: "Montserrat", sans-serif;
-      --color-principal: #6B8F71;
-      --color-fondo: #F6F4EB;
-      --color-blanco: #ffffff;
-      --color-texto: #333;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--fuente-texto);
-      background-color: var(--color-fondo);
-      color: var(--color-texto);
-    }
-
- 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contacto – CEPATAGONIA</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 
 
-
-
-    /* ================= WRAPPER ================= */
-    .page-wrapper {
-      max-width: 1100px;
-      margin: 140px auto 80px;
-      padding: 40px 28px;
-      background: #ffffff;
-      border-radius: 32px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    }
-
-    .section-title {
-      font-family: var(--fuente-titulos);
-      font-size: 2rem;
-      color: var(--color-principal);
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 0.98rem;
-      color: #555;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1.8fr;
-      gap: 26px;
-      align-items: flex-start;
-    }
-
-    .contact-info p {
-      margin-bottom: 8px;
-      font-size: 0.97rem;
-    }
-
-    .contact-info strong {
-      color: var(--color-principal);
-    }
-
-    .contact-form label {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.88rem;
-      font-weight: 500;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      margin-bottom: 14px;
-      font-size: 0.95rem;
-      font-family: var(--fuente-texto);
-    }
-
-    .contact-form textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .contact-form button {
-      padding: 10px 24px;
-      border-radius: 20px;
-      border: none;
-      background: var(--color-principal);
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background: #557a5e;
-    }
-
-    @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .page-wrapper {
-        margin: 135px 16px 50px;
-        padding: 26px 18px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        padding: 8px 14px;
-      }
-
-      nav ul {
-        gap: 10px;
-        font-size: 0.85rem;
-      }
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Evitar scroll horizontal raro */
-body {
-  overflow-x: hidden;
-}
-
-/* Header más amigable en cel */
-@media (max-width: 768px) {
-  .header-inner {
-    padding: 8px 14px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .logo-box img {
-    height: 80px; /* más chico en móvil */
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.8rem;
-  }
-
-  /* Margen superior del contenido un poco menor */
-  .page-wrapper {
-    margin-top: 145px !important;
-  }
-}
-
-/* === Ajuste extra de separación en versión móvil === */
-@media (max-width: 768px) {
-  .page-wrapper {
-    margin-top: 200px !important; /* Aumentamos la separación */
-  }
-}
-/* =====================================================
-[HEADER – ACHICAR BANDA VERDE SIN ACHICAR LOGO]
-Pegar AL FINAL del CSS en TODAS las páginas
-===================================================== */
-
-/* 1) Achica la altura del header (la franja verde) */
-.header-inner{
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-}
-
-/* 2) Mantiene el tamaño del logo (no lo achiques) */
-.logo-box img{
-  height: 92px !important;   /* ← si tu tamaño anterior era otro, decime y lo ajusto */
-  width: auto !important;
-}
-
-/* 3) Mobile: achica franja verde, pero conserva el logo (solo un poquito menor) */
-@media (max-width: 768px){
-  .header-inner{
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-  }
-
-  .logo-box img{
-    height: 92px !important; /* si querés apenas menor en celu, poné 86px */
-  }
-}
-
-/* ================= FIN HEADER ================= */
-
-
-/* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header{
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.header-inner{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.logo-box img{
-  height: 118px;
-  width: auto;
-  display: block;
-}
-
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-nav a{
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
-}
-
-nav a:hover{
-  opacity: 0.8;
-}
-/* ====================== FIN HEADER (BASE) ====================== */
-</style>
-</head>
-
+<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/contacto.css" rel="stylesheet"/><script defer src="main.js"></script></head>
 <body>
+<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
 
-  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-  <!-- Función: carga header.html para no repetir código en cada página -->
-  <div id="header-placeholder"></div>
-  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
+<div id="header-placeholder"></div>
+<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+<!-- Función: carga header.html para no repetir código en cada página -->
 
+<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
+<!-- ================= HEADER ================= -->
 
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="header-inner">
-      <div class="logo-box">
-        <a href="index.html#inicio">
-          <img src="LogoEsteticaB.png" alt="Logo CEPATAGONIA" />
-        </a>
-      </div>
-
-      <nav>
-        <ul>
-          <li><a href="index.html#inicio">INICIO</a></li>
-          <li><a href="programa.html">PROGRAMA</a></li>
-          <li><a href="informacion.html">INFORMACIÓN</a></li>
-          <li><a href="expositores.html">EXPOSITORES</a></li>
-          <li><a href="turismo.html">RECOMENDACIONES TURÍSTICAS</a></li>
-          <li><a href="contacto.html">CONTACTO</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- ============ FIN HEADER ============ -->
-
-  <!-- ================= CONTENIDO CONTACTO ================= -->
-  <main class="page-wrapper">
-    <h1 class="section-title">Contacto</h1>
-    <p class="section-subtitle">
+<!-- ============ FIN HEADER ============ -->
+<!-- ================= CONTENIDO CONTACTO ================= -->
+<main class="page-wrapper">
+<h1 class="section-title">Contacto</h1>
+<p class="section-subtitle">
       Completá tus datos y contanos en qué podemos ayudarte. Nos pondremos en contacto a la brevedad.
     </p>
-
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p><strong>Email:</strong> info@cepatagonia.com</p>
-        <p><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
-        <p><strong>Ubicación:</strong> San Martín de los Andes · Patagonia Argentina</p>
-        <p><strong>Horarios de respuesta:</strong> Lunes a viernes de 10 a 18 h</p>
-      </div>
-
-      <form class="contact-form" action="#" method="post">
-        <label for="nombre">Nombre</label>
-        <input id="nombre" name="nombre" type="text" required
-          class="only-letters"
-          title="Solo se permiten letras y espacios.">
-
-        <label for="apellido">Apellido</label>
-        <input id="apellido" name="apellido" type="text" required
-          class="only-letters"
-          title="Solo se permiten letras y espacios.">
-
-        <label for="ciudad">Ciudad</label>
-        <input id="ciudad" name="ciudad" type="text"
-          class="only-letters"
-          title="Solo se permiten letras y espacios.">
-
-        <label for="pais">País</label>
-        <input id="pais" name="pais" type="text"
-          class="only-letters"
-          title="Solo se permiten letras y espacios.">
-
-        <label for="telefono">Teléfono (solo números)</label>
-        <input id="telefono" name="telefono" type="tel"
-          pattern="[0-9+ ]+"
-          maxlength="20"
-          title="Solo se permiten números, espacios y el signo +.">
-
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" required
-          maxlength="500"
-          placeholder="Contanos en qué podemos ayudarte"></textarea>
-
-        <button type="submit">Enviar mensaje</button>
-      </form>
-    </div>
-  </main>
-  <!-- ============ FIN CONTENIDO CONTACTO ============ -->
-
-  <!-- ================= SCRIPTS ================= -->
-  <script>
+<div class="contact-grid">
+<div class="contact-info">
+<p><strong>Email:</strong> info@cepatagonia.com</p>
+<p><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
+<p><strong>Ubicación:</strong> San Martín de los Andes · Patagonia Argentina</p>
+<p><strong>Horarios de respuesta:</strong> Lunes a viernes de 10 a 18 h</p>
+</div>
+<form action="#" class="contact-form" method="post">
+<label for="nombre">Nombre</label>
+<input class="only-letters" id="nombre" name="nombre" required="" title="Solo se permiten letras y espacios." type="text"/>
+<label for="apellido">Apellido</label>
+<input class="only-letters" id="apellido" name="apellido" required="" title="Solo se permiten letras y espacios." type="text"/>
+<label for="ciudad">Ciudad</label>
+<input class="only-letters" id="ciudad" name="ciudad" title="Solo se permiten letras y espacios." type="text"/>
+<label for="pais">País</label>
+<input class="only-letters" id="pais" name="pais" title="Solo se permiten letras y espacios." type="text"/>
+<label for="telefono">Teléfono (solo números)</label>
+<input id="telefono" maxlength="20" name="telefono" pattern="[0-9+ ]+" title="Solo se permiten números, espacios y el signo +." type="tel"/>
+<label for="mensaje">Mensaje</label>
+<textarea id="mensaje" maxlength="500" name="mensaje" placeholder="Contanos en qué podemos ayudarte" required=""></textarea>
+<button type="submit">Enviar mensaje</button>
+</form>
+</div>
+</main>
+<!-- ============ FIN CONTENIDO CONTACTO ============ -->
+<!-- ================= SCRIPTS ================= -->
+<script>
     // Bloquear números y símbolos en campos solo-letras
     document.addEventListener('DOMContentLoaded', () => {
       const onlyLetterInputs = document.querySelectorAll('.only-letters');
@@ -362,12 +66,7 @@ nav a:hover{
     });
   </script>
 <!-- ===================== JS INCLUDE HEADER ===================== -->
-<script src="main.js"></script>
+
 <!-- =================== FIN JS INCLUDE HEADER =================== -->
-
 </body>
-
 </html>
-
-
-

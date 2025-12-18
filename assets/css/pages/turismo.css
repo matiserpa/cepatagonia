@@ -1,0 +1,118 @@
+/* ===================== */
+/* INICIO CSS PÁGINA: turismo.html */
+/* Función: estilos específicos de esta página */
+/* ===================== */
+
+/* (removido del CSS de página: :root ) */
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }/* (removido del CSS de página: body ) */
+
+
+  
+
+
+
+
+    /* ================= CONTENIDO ================= */
+    .page-wrapper {
+      max-width: 1000px;
+      margin: 170px auto 80px;
+      padding: 40px 30px;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--color-principal);
+      font-family: var(--fuente-titulos);
+      font-size: 2.1rem;
+      margin-bottom: 30px;
+    }
+
+    .tour-card {
+      background: var(--color-fondo);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    .tour-card h3 {
+      font-size: 1.1rem;
+      color: var(--color-principal);
+      margin-bottom: 6px;
+      font-family: var(--fuente-titulos);
+    }
+
+    .tour-card p {
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        padding: 8px 14px;
+      }
+
+      nav ul {
+        gap: 10px;
+        font-size: 0.85rem;
+      }
+
+      .page-wrapper {
+        margin: 155px 18px 50px;
+        padding: 28px 20px;
+      }
+    }
+/* ========= AJUSTES GENERALES MOBILE ========= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
+body ) */
+/* (removido del CSS de página: /* Header más amigable en cel */
+@media (max-width: 768px) ) */
+
+/* === Ajuste extra de separación en versión móvil === */
+@media (max-width: 768px) {
+  .page-wrapper {
+    margin-top: 200px !important; /* Aumentamos la separación */
+  }
+}/* (removido del CSS de página: /* ===================== INICIO HEADER (BASE) ===================== */
+/* Función: header fijo con nav consistente en todas las páginas */
+#header ) */
+/* (removido del CSS de página: .header-inner ) */
+/* (removido del CSS de página: .logo-box img ) */
+
+
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a{
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--verde-profundo, #3B4F3E);
+}
+
+nav a:hover{
+  opacity: 0.8;
+}
+/* ====================== FIN HEADER (BASE) ====================== */
+
+/* ===================== */
+/* FIN CSS PÁGINA: turismo.html */
+/* ===================== */

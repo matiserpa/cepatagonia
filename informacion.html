@@ -1,249 +1,50 @@
 <!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Información – CEPATAGONIA</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-
-  <style>
-    :root {
-      --fuente-titulos: "Playfair Display", serif;
-      --fuente-texto: "Montserrat", sans-serif;
-      --color-principal: #6B8F71;
-      --color-fondo: #F6F4EB;
-      --color-blanco: #ffffff;
-      --color-texto: #333333;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--fuente-texto);
-      background-color: var(--color-fondo);
-      color: var(--color-texto);
-    }
-
-   
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Información – CEPATAGONIA</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 
 
-
-
-    /* ================= CONTENIDO ================= */
-    .page-wrapper {
-      max-width: 1000px;
-      margin: 170px auto 70px;
-      padding: 40px 30px;
-      background: var(--color-blanco);
-      border-radius: 32px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: var(--fuente-titulos);
-      font-size: 2.2rem;
-      color: var(--color-principal);
-      margin-bottom: 25px;
-    }
-
-    p {
-      margin-bottom: 14px;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    p strong {
-      color: var(--color-principal);
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        padding: 8px 14px;
-      }
-
-      nav ul {
-        gap: 10px;
-        font-size: 0.85rem;
-      }
-
-      .page-wrapper {
-        margin: 155px 18px 50px;
-        padding: 28px 20px;
-      }
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
-
-/* Evitar scroll horizontal raro */
-body {
-  overflow-x: hidden;
-}
-
-/* Header más amigable en cel */
-@media (max-width: 768px) {
-  .header-inner {
-    padding: 8px 14px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .logo-box img {
-    height: 80px; /* más chico en móvil */
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.8rem;
-  }
-
-  /* Margen superior del contenido un poco menor */
-  .page-wrapper {
-    margin-top: 145px !important;
-  }
-}
-/* === Ajuste extra de separación en versión móvil === */
-@media (max-width: 768px) {
-  .page-wrapper {
-    margin-top: 200px !important; /* Aumentamos la separación */
-  }
-}
-
-
-/* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header{
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.header-inner{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.logo-box img{
-  height: 118px;
-  width: auto;
-  display: block;
-}
-
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-nav a{
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
-}
-
-nav a:hover{
-  opacity: 0.8;
-}
-/* ====================== FIN HEADER (BASE) ====================== */
-</style>
-</head>
-
+<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/informacion.css" rel="stylesheet"/><script defer src="main.js"></script></head>
 <body>
+<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
 
-  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-  <!-- Función: carga header.html para no repetir código en cada página -->
-  <div id="header-placeholder"></div>
-  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
+<div id="header-placeholder"></div>
+<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+<!-- Función: carga header.html para no repetir código en cada página -->
 
+<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
+<!-- ================= HEADER ================= -->
 
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="header-inner">
-      <div class="logo-box">
-        <a href="index.html#inicio">
-          <img src="LogoEsteticaB.png" alt="Logo CEPATAGONIA" />
-        </a>
-      </div>
-
-      <nav>
-        <ul>
-          <li><a href="index.html#inicio">INICIO</a></li>
-          <li><a href="programa.html">PROGRAMA</a></li>
-          <li><a href="informacion.html">INFORMACIÓN</a></li>
-          <li><a href="expositores.html">EXPOSITORES</a></li>
-          <li><a href="turismo.html">RECOMENDACIONES TURÍSTICAS</a></li>
-          <li><a href="contacto.html">CONTACTO</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- ============ FIN HEADER ============ -->
-
-  <!-- ================= CONTENIDO INFORMACIÓN ================= -->
-  <main class="page-wrapper">
-    <h1 class="section-title">Información General</h1>
-
-    <p>
+<!-- ============ FIN HEADER ============ -->
+<!-- ================= CONTENIDO INFORMACIÓN ================= -->
+<main class="page-wrapper">
+<h1 class="section-title">Información General</h1>
+<p>
       El Congreso de Estética de la Patagonia se realizará en San Martín de los Andes, en un entorno natural único
       rodeado de montañas, lagos y bosques nativos.
     </p>
-
-    <p><strong>Sede oficial:</strong> Hotel Patagonia Plaza</p>
-    <p><strong>Dirección:</strong> Av. San Martín 502</p>
-    <p><strong>Horarios de acreditación:</strong> 09:00 h del día 11 de octubre</p>
-
-    <p>
+<p><strong>Sede oficial:</strong> Hotel Patagonia Plaza</p>
+<p><strong>Dirección:</strong> Av. San Martín 502</p>
+<p><strong>Horarios de acreditación:</strong> 09:00 h del día 11 de octubre</p>
+<p>
       El Congreso está orientado a profesionales de la estética, cosmiatría, kinesiología, biología cutánea y áreas
       afines que deseen actualizarse en Estética Celular Avanzada, biotecnología y nuevas tecnologías aplicadas al
       cuidado de la piel.
     </p>
-
-    <p>
+<p>
       Se entregará certificado digital oficial de asistencia.
     </p>
-  </main>
-  <!-- ============ FIN CONTENIDO INFORMACIÓN ============ -->
+</main>
+<!-- ============ FIN CONTENIDO INFORMACIÓN ============ -->
+<!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
+<!-- Función: inserta header.html dentro de #header-placeholder -->
 
-
-  <!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
-  <!-- Función: inserta header.html dentro de #header-placeholder -->
-  <script src="main.js" defer></script>
-  <!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
-
+<!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
 </body>
-
 </html>
-
-
