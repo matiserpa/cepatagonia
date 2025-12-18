@@ -1,0 +1,306 @@
+/* ===================================================== */
+/* INICIO RESET + VARIABLES                              */
+/* Función: base consistente + paleta global             */
+/* ===================================================== */
+
+:root{
+  /* Paleta */
+  --bg: #0b0f14;
+  --surface: rgba(255,255,255,.04);
+  --text: #e9eef5;
+  --muted: rgba(233,238,245,.72);
+  --border: rgba(255,255,255,.12);
+
+  /* Glass */
+  --glass: rgba(15, 18, 28, 0.55);
+  --glass-border: rgba(255,255,255,.12);
+
+  /* Accent */
+  --accent: #7dd3fc;
+
+  /* Layout */
+  --container: 1200px;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+
+  /* Spacing */
+  --s-1: 8px;
+  --s-2: 12px;
+  --s-3: 16px;
+  --s-4: 24px;
+  --s-5: 32px;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+img{ max-width: 100%; height: auto; display: block; }
+a{ color: inherit; }
+
+/* ===================================================== */
+/* FIN RESET + VARIABLES                                 */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO LAYOUT                                         */
+/* Función: contenedores y espaciado general             */
+/* ===================================================== */
+
+.container{
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+}
+
+.section{
+  padding: 56px 0;
+}
+
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--s-4);
+}
+
+/* Tipografía base */
+.h1{
+  font-size: clamp(28px, 3vw, 44px);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--s-2) 0;
+}
+
+.h2{
+  font-size: clamp(20px, 2vw, 28px);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--s-2) 0;
+}
+
+.p{
+  margin: 0 0 var(--s-3) 0;
+  color: var(--muted);
+}
+
+/* ===================================================== */
+/* FIN LAYOUT                                            */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO HEADER (APPLE GLASS)                           */
+/* Función: header único sticky con blur estilo Apple    */
+/* ===================================================== */
+
+.site-header.apple-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.header-container{
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+
+  padding: 14px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+
+.logo{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  text-decoration: none;
+}
+
+.logo img{
+  height: 38px;
+  width: auto;
+
+  /* Si tu logo es oscuro y el fondo es oscuro: */
+  filter: brightness(0) invert(1);
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav a{
+  text-decoration: none;
+  font-weight: 600;
+  opacity: .86;
+  padding: 10px 10px;
+  border-radius: 12px;
+  transition: opacity .2s ease, background .2s ease, transform .2s ease;
+}
+
+.nav a:hover{
+  opacity: 1;
+  background: rgba(255,255,255,.06);
+  transform: translateY(-1px);
+}
+
+/* ===================================================== */
+/* FIN HEADER (APPLE GLASS)                              */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO HERO / TITULOS DE SECCIÓN                      */
+/* Función: títulos consistentes por página              */
+/* ===================================================== */
+
+.page-title{
+  padding: 48px 0 24px 0;
+}
+
+.page-title .subtitle{
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+/* Si tu header tapa contenido (cuando usás sticky), este “respiro” ayuda */
+.page-offset{
+  padding-top: 16px;
+}
+
+/* ===================================================== */
+/* FIN HERO / TITULOS DE SECCIÓN                         */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO BOTONES                                        */
+/* Función: CTAs consistentes (si usás botones)          */
+/* ===================================================== */
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+
+  transition: transform .2s ease, background .2s ease, opacity .2s ease;
+}
+
+.btn:hover{
+  background: rgba(255,255,255,.10);
+  transform: translateY(-1px);
+}
+
+.btn.primary{
+  border-color: rgba(125,211,252,.35);
+  background: rgba(125,211,252,.12);
+}
+
+/* ===================================================== */
+/* FIN BOTONES                                           */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO GRIDS                                          */
+/* Función: grillas para secciones / cards               */
+/* ===================================================== */
+
+.grid{
+  display: grid;
+  gap: var(--s-4);
+}
+
+.grid.two{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.three{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* ===================================================== */
+/* FIN GRIDS                                             */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO FOOTER                                         */
+/* Función: footer simple y prolijo                      */
+/* ===================================================== */
+
+.site-footer{
+  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,.02);
+  padding: 28px 0;
+  color: var(--muted);
+}
+
+/* ===================================================== */
+/* FIN FOOTER                                            */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO RESPONSIVE                                     */
+/* Función: ajustes mobile                               */
+/* ===================================================== */
+
+@media (max-width: 900px){
+  .grid.three{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px){
+  .header-container{
+    padding: 12px 0;
+    gap: var(--s-3);
+  }
+
+  .nav{
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav a{
+    padding: 9px 10px;
+  }
+
+  .section{
+    padding: 40px 0;
+  }
+
+  .grid.two, .grid.three{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================== */
+/* FIN RESPONSIVE                                        */
+/* ===================================================== */
