@@ -1,108 +1,138 @@
-/* ===================== */
-/* INICIO CSS PÁGINA: informacion.html */
-/* Función: estilos específicos de esta página */
-/* ===================== */
-
-/* (removido del CSS de página: :root ) */
+/* ===================================================== */
+/* INICIO CSS PÁGINA: informacion.html                   */
+/* Función: estilos específicos de Información            */
+/* ===================================================== */
 
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }/* (removido del CSS de página: body ) */
+/* ===================================================== */
+/* INICIO LAYOUT                                          */
+/* ===================================================== */
+
+.page-wrapper{
+  max-width: 1000px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+}
+
+/* Usamos .card global, solo afinamos espaciados */
+.info-card{
+  border-radius: 40px;
+  padding: 50px 40px;
+}
+
+/* Título principal */
+.section-title{
+  text-align: center;
+  font-family: var(--fuente-titulos);
+  font-size: 2.2rem;
+  color: var(--verde-principal);
+  margin: 0 0 25px;
+}
+
+/* Párrafos */
+.info-card p{
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--texto-principal);
+}
+
+.info-card p strong{
+  color: var(--verde-principal);
+}
+
+/* ===================================================== */
+/* FIN LAYOUT                                             */
+/* ===================================================== */
 
 
-   
+/* ===================================================== */
+/* INICIO BLOQUES                                         */
+/* ===================================================== */
+
+.info-block{
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.info-block h2{
+  font-family: var(--fuente-titulos);
+  font-size: 1.35rem;
+  color: var(--verde-principal);
+  margin: 0 0 12px;
+}
+
+/* Lista de datos clave */
+.info-list{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.info-list li{
+  margin: 10px 0;
+  color: var(--texto-secundario);
+  line-height: 1.6;
+}
+
+.info-list li strong{
+  color: var(--texto-principal);
+}
+
+/* CTA */
+.info-cta{
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.cta-text{
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  color: var(--texto-secundario);
+}
+
+/* ===================================================== */
+/* FIN BLOQUES                                            */
+/* ===================================================== */
 
 
+/* ===================================================== */
+/* INICIO RESPONSIVE                                      */
+/* ===================================================== */
 
+@media (max-width: 768px){
 
-    /* ================= CONTENIDO ================= */
-    .page-wrapper {
-      max-width: 1000px;
-      margin: 170px auto 70px;
-      padding: 40px 30px;
-      background: var(--color-blanco);
-      border-radius: 32px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: var(--fuente-titulos);
-      font-size: 2.2rem;
-      color: var(--color-principal);
-      margin-bottom: 25px;
-    }
-
-    p {
-      margin-bottom: 14px;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    p strong {
-      color: var(--color-principal);
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        padding: 8px 14px;
-      }
-
-      nav ul {
-        gap: 10px;
-        font-size: 0.85rem;
-      }
-
-      .page-wrapper {
-        margin: 155px 18px 50px;
-        padding: 28px 20px;
-      }
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
-body ) */
-/* (removido del CSS de página: /* Header más amigable en cel */
-@media (max-width: 768px) ) */
-
-/* === Ajuste extra de separación en versión móvil === */
-@media (max-width: 768px) {
-  .page-wrapper {
-    margin-top: 200px !important; /* Aumentamos la separación */
+  .page-wrapper{
+    margin: 40px auto 60px;
+    padding: 0 16px;
   }
-}/* (removido del CSS de página: /* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header ) */
-/* (removido del CSS de página: .header-inner ) */
-/* (removido del CSS de página: .logo-box img ) */
 
+  .info-card{
+    padding: 34px 20px;
+    border-radius: 28px;
+  }
 
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
+  .section-title{
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+  }
+
+  .info-card p{
+    font-size: 1.02rem;
+  }
+
+  .info-block h2{
+    font-size: 1.2rem;
+  }
 }
 
-nav a{
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
-}
+/* ===================================================== */
+/* FIN RESPONSIVE                                         */
+/* ===================================================== */
 
-nav a:hover{
-  opacity: 0.8;
-}
-/* ====================== FIN HEADER (BASE) ====================== */
 
-/* ===================== */
-/* FIN CSS PÁGINA: informacion.html */
-/* ===================== */
+/* ===================================================== */
+/* FIN CSS PÁGINA: informacion.html                       */
+/* ===================================================== */
