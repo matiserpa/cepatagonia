@@ -83,6 +83,9 @@ a{
 /* ===================================================== */
 /* HEADER (ESTILO ORIGINAL)                              */
 /* ===================================================== */
+/* ===================================================== */
+/* HEADER (ESTILO ORIGINAL)                              */
+/* ===================================================== */
 .site-header{
   position: sticky;
   top: 0;
@@ -93,12 +96,34 @@ a{
 .header-container{
   width: min(100% - 32px, var(--container));
   margin: 0 auto;
-  padding: 22px 0;
+
+  /* ↓ Bajamos padding para compensar logo más grande */
+  padding: 14px 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+.logo img{
+  /* ↓ Logo más grande */
+  height: 58px;
+  width: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .header-container{
+    flex-direction: column;
+    gap: 14px;
+    padding: 12px 0;
+  }
+
+  .logo img{
+    height: 54px; /* apenas más chico en mobile */
+  }
+}
+
 
 /* ===================== */
 /* LOGO HEADER           */
