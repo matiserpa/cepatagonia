@@ -51,3 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ===== FIN MODAL ADQUIRÍ TU PASE =====
 
+// ===== FORZAR SCROLL ARRIBA AL RECARGAR =====
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+// ===== FIN FORZAR SCROLL ARRIBA AL RECARGAR =====
+
