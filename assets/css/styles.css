@@ -100,10 +100,23 @@ a{
   justify-content: space-between;
 }
 
+/* ===================== */
+/* LOGO HEADER           */
+/* Logo más grande SIN aumentar la franja */
+/* ===================== */
+.logo{
+  display: flex;
+  align-items: center;
+}
+
 .logo img{
-  height: 42px;
+  height: 58px;   /* ← tamaño final aprobado */
   width: auto;
 }
+/* ===================== */
+/* FIN LOGO HEADER       */
+/* ===================== */
+
 
 /* NAV */
 .nav{
@@ -185,6 +198,10 @@ a{
   .card{
     padding: 35px 25px;
     border-radius: 28px;
+  }
+
+  .logo img{
+    height: 52px; /* apenas más chico en mobile */
   }
 }
 
