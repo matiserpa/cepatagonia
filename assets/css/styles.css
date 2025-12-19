@@ -1,9 +1,8 @@
 /* ===================================================== */
 /* BASE GLOBAL – CEPATAGONIA                             */
 /* Paleta original: beige + verde salvia                 */
-/* Versión estable para presentación                    */
+/* Versión estable para presentación                     */
 /* ===================================================== */
-
 
 /* ===================================================== */
 /* VARIABLES GLOBALES                                    */
@@ -28,17 +27,12 @@
   --shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
-
 /* ===================================================== */
 /* RESET + BASE                                          */
 /* ===================================================== */
-*{
-  box-sizing: border-box;
-}
+*{ box-sizing: border-box; }
 
-html, body{
-  height: 100%;
-}
+html, body{ height: 100%; }
 
 body{
   margin: 0;
@@ -59,7 +53,6 @@ a{
   text-decoration: none;
 }
 
-
 /* ===================================================== */
 /* LAYOUT                                                */
 /* ===================================================== */
@@ -79,17 +72,13 @@ a{
   padding: 50px 40px;
 }
 
-
 /* ===================================================== */
-/* HEADER (ESTILO ORIGINAL)                              */
-/* ===================================================== */
-/* ===================================================== */
-/* HEADER (ESTILO ORIGINAL)                              */
+/* HEADER – STICKY (siempre visible al scrollear)         */
 /* ===================================================== */
 .site-header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: sticky;     /* clave */
+  top: 0;               /* se pega arriba */
+  z-index: 1000;        /* por encima del contenido */
   background: var(--verde-header);
 }
 
@@ -97,56 +86,32 @@ a{
   width: min(100% - 32px, var(--container));
   margin: 0 auto;
 
-  /* ↓ Bajamos padding para compensar logo más grande */
+  /* Ajuste para que el logo sea grande sin agrandar banda */
   padding: 14px 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
-.logo img{
-  /* ↓ Logo más grande */
-  height: 58px;
-  width: auto;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px){
-  .header-container{
-    flex-direction: column;
-    gap: 14px;
-    padding: 12px 0;
-  }
-
-  .logo img{
-    height: 54px; /* apenas más chico en mobile */
-  }
-}
-
-
-/* ===================== */
-/* LOGO HEADER           */
-/* Logo más grande SIN aumentar la franja */
-/* ===================== */
+/* LOGO */
 .logo{
   display: flex;
   align-items: center;
 }
 
 .logo img{
-  height: 58px;   /* ← tamaño final aprobado */
+  height: 58px;   /* tamaño final aprobado */
   width: auto;
 }
-/* ===================== */
-/* FIN LOGO HEADER       */
-/* ===================== */
-
 
 /* NAV */
 .nav{
   display: flex;
   gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav a{
@@ -162,7 +127,6 @@ a{
 .nav a:hover{
   opacity: 1;
 }
-
 
 /* ===================================================== */
 /* BOTONES                                               */
@@ -199,7 +163,6 @@ a{
   color: #ffffff;
 }
 
-
 /* ===================================================== */
 /* RESPONSIVE                                            */
 /* ===================================================== */
@@ -207,11 +170,15 @@ a{
 
   .header-container{
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
+    padding: 12px 0;
+  }
+
+  .logo img{
+    height: 52px;
   }
 
   .nav{
-    flex-wrap: wrap;
     justify-content: center;
     gap: 14px;
   }
@@ -224,12 +191,11 @@ a{
     padding: 35px 25px;
     border-radius: 28px;
   }
-
-  .logo img{
-    height: 52px; /* apenas más chico en mobile */
-  }
 }
-/* ================= MODAL ================= */
+
+/* ===================================================== */
+/* MODAL – ADQUIRÍ TU PASE                               */
+/* ===================================================== */
 .modal{
   position: fixed;
   inset: 0;
@@ -238,7 +204,9 @@ a{
   align-items: center;
   justify-content: center;
   z-index: 3000;
+  padding: 18px;
 }
+
 .modal.show{ display: flex; }
 
 .modal-content{
@@ -257,9 +225,6 @@ a{
   display: block;
   margin: 0 auto 20px;
 }
-/* =============== FIN MODAL =============== */
-
-
 
 /* ===================================================== */
 /* FIN BASE GLOBAL                                      */
