@@ -1,133 +1,109 @@
-/* ===================== */
-/* INICIO CSS PÁGINA: expositores.html */
-/* Función: estilos específicos de esta página */
-/* ===================== */
-
-/* (removido del CSS de página: :root ) */
+/* ===================================================== */
+/* INICIO CSS PÁGINA: expositores.html                   */
+/* Función: grilla de expositores + tarjetas             */
+/* ===================================================== */
 
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }/* (removido del CSS de página: body ) */
+/* ===================================================== */
+/* INICIO CONTENIDO                                      */
+/* ===================================================== */
+
+.page-wrapper{
+  max-width: 1100px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+}
+
+/* Contenedor tipo “card grande” */
+.page-wrapper .panel{
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  padding: 50px 40px;
+}
+
+/* Título de sección */
+.section-title{
+  text-align: center;
+  font-family: var(--fuente-titulos);
+  font-size: 2.2rem;
+  color: var(--verde-principal);
+  margin: 0 0 35px;
+}
+
+/* Grilla */
+.expositor-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* Tarjeta expositor */
+.expositor-card{
+  background: rgba(255,255,255,0.9);
+  border-radius: 22px;
+  padding: 18px 18px 22px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+  text-align: center;
+  border: 1px solid rgba(95,127,99,0.18);
+}
+
+.expositor-card img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 12px;
+}
+
+.expositor-card h3{
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  color: var(--verde-principal);
+  margin: 0 0 6px;
+}
+
+.expositor-card p{
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--texto-secundario);
+  margin: 0;
+}
+
+/* ===================================================== */
+/* FIN CONTENIDO                                         */
+/* ===================================================== */
 
 
-   
+/* ===================================================== */
+/* INICIO RESPONSIVE                                     */
+/* ===================================================== */
+@media (max-width: 768px){
 
-
-
-
-    /* ================= CONTENIDO ================= */
-    .page-wrapper {
-      max-width: 1100px;
-      margin: 170px auto 80px;
-      padding: 40px 30px;
-      background: var(--color-blanco);
-      border-radius: 32px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: var(--fuente-titulos);
-      font-size: 2.2rem;
-      color: var(--color-principal);
-      margin-bottom: 35px;
-    }
-
-    .expositor-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 22px;
-      padding: 18px 18px 22px;
-      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
-      text-align: center;
-    }
-
-    .card img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      border-radius: 18px;
-      margin-bottom: 12px;
-    }
-
-    .card h3 {
-      font-family: var(--fuente-titulos);
-      font-size: 1.2rem;
-      color: var(--color-principal);
-      margin-bottom: 6px;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: #444;
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        padding: 8px 14px;
-      }
-
-      nav ul {
-        gap: 10px;
-        font-size: 0.85rem;
-      }
-
-      .page-wrapper {
-        margin: 155px 18px 50px;
-        padding: 28px 20px;
-      }
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
-body ) */
-/* (removido del CSS de página: /* Header más amigable en cel */
-@media (max-width: 768px) ) */
-
-/* === Ajuste extra de separación en versión móvil === */
-@media (max-width: 768px) {
-  .page-wrapper {
-    margin-top: 200px !important; /* Aumentamos la separación */
+  .page-wrapper{
+    margin: 40px auto 60px;
+    padding: 0 16px;
   }
-}/* (removido del CSS de página: /* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header ) */
-/* (removido del CSS de página: .header-inner ) */
-/* (removido del CSS de página: .logo-box img ) */
 
+  .page-wrapper .panel{
+    padding: 34px 20px;
+    border-radius: 24px;
+  }
 
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
+  .section-title{
+    font-size: 1.9rem;
+    margin-bottom: 22px;
+  }
+
+  .expositor-card img{
+    height: 170px;
+  }
 }
+/* ===================================================== */
+/* FIN RESPONSIVE                                        */
+/* ===================================================== */
 
-nav a{
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
-}
 
-nav a:hover{
-  opacity: 0.8;
-}
-/* ====================== FIN HEADER (BASE) ====================== */
-
-/* ===================== */
-/* FIN CSS PÁGINA: expositores.html */
-/* ===================== */
+/* ===================================================== */
+/* FIN CSS PÁGINA: expositores.html                      */
+/* ===================================================== */
