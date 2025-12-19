@@ -31,39 +31,28 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 // =================== FIN HEADER INCLUDE ====================
-// ===================== MODAL "PRÓXIMAMENTE" ======================
-// Función: abre modal al clickear "ADQUIRÍ TU PASE"
+
+// ================= MODAL PRÓXIMAMENTE =================
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("btn-pase");
   const modal = document.getElementById("modal-proximamente");
   const ok = document.getElementById("modal-ok");
+  const backdrop = modal?.querySelector(".modal-backdrop");
 
   if (!btn || !modal) return;
 
-  const openModal = () => {
-    modal.classList.add("is-open");
+  btn.addEventListener("click", () => {
+    modal.classList.add("is-active");
     modal.setAttribute("aria-hidden", "false");
-  };
+  });
 
   const closeModal = () => {
-    modal.classList.remove("is-open");
+    modal.classList.remove("is-active");
     modal.setAttribute("aria-hidden", "true");
   };
 
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    openModal();
-  });
-
   ok?.addEventListener("click", closeModal);
-
-  modal.addEventListener("click", (e) => {
-    if (e.target?.dataset?.close === "true") closeModal();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-  });
+  backdrop?.addEventListener("click", closeModal);
 });
-// =================== FIN MODAL "PRÓXIMAMENTE" ====================
+// =============== FIN MODAL PRÓXIMAMENTE ===============
 
