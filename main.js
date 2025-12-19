@@ -5,19 +5,29 @@ document.addEventListener("DOMContentLoaded", async () => {
   const slot = document.getElementById("header-placeholder");
   if (!slot) return;
 
-  try {
-    // Construye ruta relativa desde la ubicación actual (evita 404)
-    const headerUrl = new URL("header.html", window.location.href);
-
-    const res = await fetch(headerUrl.toString(), { cache: "no-store" });
+  const tryFetch = async (url) => {
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) throw new Error("No se pudo cargar header.html");
+    return res.text();
+  };
 
-    const html = await res.text();
+  try {
+    // 1) Intento principal (según URL actual)
+    const headerUrl = new URL("header.html", window.location.href).toString();
+    const html = await tryFetch(headerUrl);
     slot.innerHTML = html;
 
-  } catch (err) {
-    console.error(err);
-    slot.innerHTML = "<!-- Error cargando el header -->";
+  } catch (err1) {
+    try {
+      // 2) Fallback: mismo directorio (por si hay algún caso raro)
+      const html = await tryFetch("./header.html");
+      slot.innerHTML = html;
+
+    } catch (err2) {
+      console.error(err1);
+      console.error(err2);
+      slot.innerHTML = "<!-- Error cargando el header -->";
+    }
   }
 });
 // =================== FIN HEADER INCLUDE ====================
