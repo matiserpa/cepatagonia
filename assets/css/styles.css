@@ -25,6 +25,10 @@
   --container: 1200px;
   --radius: 22px;
   --shadow: 0 8px 24px rgba(0,0,0,.12);
+
+  /* Header height aproximado (para compensar fixed) */
+  --header-offset-desktop: 92px;
+  --header-offset-mobile: 132px;
 }
 
 /* ===================================================== */
@@ -40,6 +44,9 @@ body{
   color: var(--texto-principal);
   font-family: var(--fuente-texto);
   line-height: 1.6;
+
+  /* ✅ Compensa el header FIXED para que no tape el contenido */
+  padding-top: var(--header-offset-desktop);
 }
 
 img{
@@ -73,12 +80,15 @@ a{
 }
 
 /* ===================================================== */
-/* HEADER – STICKY (siempre visible al scrollear)         */
+/* HEADER – FIXED (siempre visible al scrollear)          */
+/* Nota: sticky puede fallar por overflow/transform en CSS */
 /* ===================================================== */
 .site-header{
-  position: sticky;     /* clave */
-  top: 0;               /* se pega arriba */
-  z-index: 1000;        /* por encima del contenido */
+  position: fixed;      /* ✅ no falla nunca */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;        /* por encima de todo */
   background: var(--verde-header);
 }
 
@@ -167,6 +177,10 @@ a{
 /* RESPONSIVE                                            */
 /* ===================================================== */
 @media (max-width: 768px){
+
+  body{
+    padding-top: var(--header-offset-mobile);
+  }
 
   .header-container{
     flex-direction: column;
