@@ -229,9 +229,8 @@ a{
     height: 52px; /* apenas más chico en mobile */
   }
 }
-/* ================= MODAL PROXIMAMENTE ================= */
-
-.modal-overlay{
+/* ================= MODAL ================= */
+.modal{
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.55);
@@ -241,52 +240,31 @@ a{
   z-index: 2000;
 }
 
-.modal-overlay.active{
+.modal.show{
   display: flex;
 }
 
-.modal-card{
-  background: #ffffff;
-  padding: 34px 30px 30px;
-  border-radius: 28px;
-  max-width: 420px;
-  width: calc(100% - 32px);
+.modal-content{
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 30px;
   text-align: center;
-  box-shadow: 0 18px 50px rgba(0,0,0,.25);
+  max-width: 420px;
+  width: 90%;
 }
 
-/* LOGO MODAL */
 .modal-logo{
-  height: 70px;
-  width: auto;
-  display: block;
-  margin: 0 auto 18px;
+  max-width: 160px;
+  margin: 0 auto 20px;
 }
 
-/* TÍTULO */
-.modal-card h3{
+.modal-content h2{
   font-family: var(--fuente-titulos);
-  font-size: 1.6rem;
   color: var(--verde-principal);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-/* TEXTO */
-.modal-card p{
-  font-size: 0.95rem;
-  color: var(--texto-secundario);
-  margin-bottom: 22px;
-  line-height: 1.5;
-}
-
-/* MOBILE */
-@media (max-width: 768px){
-  .modal-logo{
-    height: 58px;
-  }
-}
-/* ============== FIN MODAL ================= */
-
+/* ================= FIN MODAL ================= */
 
 
 /* ===================================================== */
