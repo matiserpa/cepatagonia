@@ -1,93 +1,107 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contacto – CEPATAGONIA</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Contacto – CEPATAGONIA</title>
 
+  <!-- ===================== INICIO FONTS ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ====================== FIN FONTS ====================== -->
 
-<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/contacto.css" rel="stylesheet"/><script defer src="main.js"></script></head>
+  <!-- ===================== INICIO CSS GLOBAL ===================== -->
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS GLOBAL ====================== -->
+
+  <!-- ===================== INICIO CSS PÁGINA ===================== -->
+  <link href="assets/css/pages/contacto.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS PÁGINA ====================== -->
+
+  <!-- ===================== INICIO JS ===================== -->
+  <script defer src="main.js"></script>
+  <!-- ====================== FIN JS ====================== -->
+</head>
+
 <body>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
 
-<div id="header-placeholder"></div>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- ===================================================== -->
-<!-- INICIO HEADER GLOBAL -->
-<!-- Función: Header único (navbar) para todas las páginas -->
-<!-- Estilo: Apple blur + paleta verde desde CSS global    -->
-<!-- ===================================================== -->
-
-<header class="site-header apple-header">
-  <div class="header-container">
-
-    <!-- INICIO LOGO -->
-    <a href="index.html" class="logo" aria-label="Inicio">
-      <img src="LogoEsteticaB.png" alt="Cepa Patagonia Logo">
-    </a>
-    <!-- FIN LOGO -->
-
-    <!-- INICIO NAV -->
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="programa.html">Programa</a>
-      <a href="expositores.html">Expositores</a>
-      <a href="informacion.html">Información</a>
-      <a href="turismo.html">Turismo</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-    <!-- FIN NAV -->
-
-  </div>
-</header>
-
-<!-- ===================================================== -->
-<!-- FIN HEADER GLOBAL -->
-<!-- ===================================================== -->
+  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+  <!-- Función: carga header.html para no repetir código en cada página -->
+  <div id="header-placeholder"></div>
+  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
 
 
-<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
-<!-- ================= HEADER ================= -->
+  <!-- ================= CONTENIDO CONTACTO ================= -->
+  <main class="page-wrapper">
+    <div class="card contact-card">
 
-<!-- ============ FIN HEADER ============ -->
-<!-- ================= CONTENIDO CONTACTO ================= -->
-<main class="page-wrapper">
-<h1 class="section-title">Contacto</h1>
-<p class="section-subtitle">
-      Completá tus datos y contanos en qué podemos ayudarte. Nos pondremos en contacto a la brevedad.
-    </p>
-<div class="contact-grid">
-<div class="contact-info">
-<p><strong>Email:</strong> info@cepatagonia.com</p>
-<p><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
-<p><strong>Ubicación:</strong> San Martín de los Andes · Patagonia Argentina</p>
-<p><strong>Horarios de respuesta:</strong> Lunes a viernes de 10 a 18 h</p>
-</div>
-<form action="#" class="contact-form" method="post">
-<label for="nombre">Nombre</label>
-<input class="only-letters" id="nombre" name="nombre" required="" title="Solo se permiten letras y espacios." type="text"/>
-<label for="apellido">Apellido</label>
-<input class="only-letters" id="apellido" name="apellido" required="" title="Solo se permiten letras y espacios." type="text"/>
-<label for="ciudad">Ciudad</label>
-<input class="only-letters" id="ciudad" name="ciudad" title="Solo se permiten letras y espacios." type="text"/>
-<label for="pais">País</label>
-<input class="only-letters" id="pais" name="pais" title="Solo se permiten letras y espacios." type="text"/>
-<label for="telefono">Teléfono (solo números)</label>
-<input id="telefono" maxlength="20" name="telefono" pattern="[0-9+ ]+" title="Solo se permiten números, espacios y el signo +." type="tel"/>
-<label for="mensaje">Mensaje</label>
-<textarea id="mensaje" maxlength="500" name="mensaje" placeholder="Contanos en qué podemos ayudarte" required=""></textarea>
-<button type="submit">Enviar mensaje</button>
-</form>
-</div>
-</main>
-<!-- ============ FIN CONTENIDO CONTACTO ============ -->
-<!-- ================= SCRIPTS ================= -->
-<script>
-    // Bloquear números y símbolos en campos solo-letras
+      <h1 class="section-title">Contacto</h1>
+      <p class="section-subtitle">
+        Completá tus datos y contanos en qué podemos ayudarte. Nos pondremos en contacto a la brevedad.
+      </p>
+
+      <div class="contact-grid">
+
+        <!-- ===================== -->
+        <!-- INICIO INFO CONTACTO -->
+        <!-- ===================== -->
+        <div class="contact-info">
+          <p><strong>Email:</strong> info@cepatagonia.com</p>
+          <p><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
+          <p><strong>Ubicación:</strong> San Martín de los Andes · Patagonia Argentina</p>
+          <p><strong>Horarios de respuesta:</strong> Lunes a viernes de 10 a 18 h</p>
+        </div>
+        <!-- ===================== -->
+        <!-- FIN INFO CONTACTO -->
+        <!-- ===================== -->
+
+
+        <!-- ===================== -->
+        <!-- INICIO FORMULARIO -->
+        <!-- ===================== -->
+        <form action="#" class="contact-form" method="post">
+          <label for="nombre">Nombre</label>
+          <input class="only-letters" id="nombre" name="nombre" required
+                 title="Solo se permiten letras y espacios." type="text"/>
+
+          <label for="apellido">Apellido</label>
+          <input class="only-letters" id="apellido" name="apellido" required
+                 title="Solo se permiten letras y espacios." type="text"/>
+
+          <label for="ciudad">Ciudad</label>
+          <input class="only-letters" id="ciudad" name="ciudad"
+                 title="Solo se permiten letras y espacios." type="text"/>
+
+          <label for="pais">País</label>
+          <input class="only-letters" id="pais" name="pais"
+                 title="Solo se permiten letras y espacios." type="text"/>
+
+          <label for="telefono">Teléfono (solo números)</label>
+          <input id="telefono" maxlength="20" name="telefono"
+                 pattern="[0-9+ ]+"
+                 title="Solo se permiten números, espacios y el signo +."
+                 type="tel"/>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" maxlength="500" name="mensaje"
+                    placeholder="Contanos en qué podemos ayudarte" required></textarea>
+
+          <button type="submit" class="btn primary">Enviar mensaje</button>
+        </form>
+        <!-- ===================== -->
+        <!-- FIN FORMULARIO -->
+        <!-- ===================== -->
+
+      </div>
+    </div>
+  </main>
+  <!-- ============ FIN CONTENIDO CONTACTO ============ -->
+
+
+  <!-- ===================== INICIO VALIDACIÓN JS ===================== -->
+  <!-- Función: bloquear números y símbolos en campos "only-letters" -->
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
       const onlyLetterInputs = document.querySelectorAll('.only-letters');
       onlyLetterInputs.forEach(input => {
@@ -97,8 +111,7 @@
       });
     });
   </script>
-<!-- ===================== JS INCLUDE HEADER ===================== -->
+  <!-- ====================== FIN VALIDACIÓN JS ====================== -->
 
-<!-- =================== FIN JS INCLUDE HEADER =================== -->
 </body>
 </html>
