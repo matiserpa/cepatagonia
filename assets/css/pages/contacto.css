@@ -1,190 +1,177 @@
-/* ===================== */
-/* INICIO CSS PÁGINA: contacto.html */
-/* Función: estilos específicos de esta página */
-/* ===================== */
-
-/* (removido del CSS de página: :root ) */
+/* ===================================================== */
+/* INICIO CSS PÁGINA: contacto.html                      */
+/* Función: layout + formulario + grilla                 */
+/* ===================================================== */
 
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }/* (removido del CSS de página: body ) */
+/* ===================================================== */
+/* INICIO LAYOUT                                         */
+/* ===================================================== */
 
-
- 
-
-
-
-
-    /* ================= WRAPPER ================= */
-    .page-wrapper {
-      max-width: 1100px;
-      margin: 140px auto 80px;
-      padding: 40px 28px;
-      background: #ffffff;
-      border-radius: 32px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    }
-
-    .section-title {
-      font-family: var(--fuente-titulos);
-      font-size: 2rem;
-      color: var(--color-principal);
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 0.98rem;
-      color: #555;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1.8fr;
-      gap: 26px;
-      align-items: flex-start;
-    }
-
-    .contact-info p {
-      margin-bottom: 8px;
-      font-size: 0.97rem;
-    }
-
-    .contact-info strong {
-      color: var(--color-principal);
-    }
-
-    .contact-form label {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.88rem;
-      font-weight: 500;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      margin-bottom: 14px;
-      font-size: 0.95rem;
-      font-family: var(--fuente-texto);
-    }
-
-    .contact-form textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .contact-form button {
-      padding: 10px 24px;
-      border-radius: 20px;
-      border: none;
-      background: var(--color-principal);
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background: #557a5e;
-    }
-
-    @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .page-wrapper {
-        margin: 135px 16px 50px;
-        padding: 26px 18px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        padding: 8px 14px;
-      }
-
-      nav ul {
-        gap: 10px;
-        font-size: 0.85rem;
-      }
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
-body ) */
-/* (removido del CSS de página: /* Header más amigable en cel */
-@media (max-width: 768px) ) */
-
-
-/* === Ajuste extra de separación en versión móvil === */
-@media (max-width: 768px) {
-  .page-wrapper {
-    margin-top: 200px !important; /* Aumentamos la separación */
-  }
-}/* (removido del CSS de página: /* =====================================================
-[HEADER – ACHICAR BANDA VERDE SIN ACHICAR LOGO]
-Pegar AL FINAL del CSS en TODAS las páginas
-===================================================== */
-
-/* 1) Achica la altura del header (la franja verde) */
-.header-inner ) */
-/* (removido del CSS de página: /* 2) Mantiene el tamaño del logo (no lo achiques) */
-.logo-box img ) */
-
-
-/* 3) Mobile: achica franja verde, pero conserva el logo (solo un poquito menor) */
-@media (max-width: 768px){
-  .header-inner{
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-  }
-
-  .logo-box img{
-    height: 92px !important; /* si querés apenas menor en celu, poné 86px */
-  }
-}/* (removido del CSS de página: /* ================= FIN HEADER ================= */
-
-
-/* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header ) */
-/* (removido del CSS de página: .header-inner ) */
-/* (removido del CSS de página: .logo-box img ) */
-
-
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
+.page-wrapper{
+  max-width: 1100px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
 }
 
-nav a{
-  text-decoration: none;
+/* Usamos la card global, solo afinamos para contacto */
+.contact-card{
+  border-radius: 40px;
+  padding: 50px 40px;
+}
+
+.section-title{
+  font-family: var(--fuente-titulos);
+  font-size: 2.2rem;
+  color: var(--verde-principal);
+  text-align: center;
+  margin: 0 0 14px;
+}
+
+.section-subtitle{
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 30px;
+  font-size: 1.02rem;
+  color: var(--texto-secundario);
+  line-height: 1.6;
+}
+
+/* ===================================================== */
+/* FIN LAYOUT                                            */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO GRID                                           */
+/* ===================================================== */
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1.1fr 1.9fr;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.contact-info{
+  background: rgba(246, 243, 234, 0.65);
+  border: 1px solid rgba(95,127,99,0.16);
+  border-radius: 22px;
+  padding: 18px 18px;
+}
+
+.contact-info p{
+  margin: 0 0 10px;
+  font-size: 1.0rem;
+  color: var(--texto-secundario);
+}
+
+.contact-info p:last-child{
+  margin-bottom: 0;
+}
+
+.contact-info strong{
+  color: var(--texto-principal);
+}
+
+/* ===================================================== */
+/* FIN GRID                                              */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO FORMULARIO                                     */
+/* ===================================================== */
+
+.contact-form label{
+  display: block;
+  margin: 0 0 6px;
+  font-size: 0.92rem;
   font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
+  color: var(--texto-principal);
+  font-family: var(--fuente-titulos);
+  letter-spacing: 0.5px;
 }
 
-nav a:hover{
-  opacity: 0.8;
+.contact-form input,
+.contact-form textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: #ffffff;
+  margin: 0 0 14px;
+  font-size: 1rem;
+  font-family: var(--fuente-texto);
+  color: var(--texto-principal);
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease;
 }
-/* ====================== FIN HEADER (BASE) ====================== */
 
-/* ===================== */
-/* FIN CSS PÁGINA: contacto.html */
-/* ===================== */
+.contact-form textarea{
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color: rgba(95,127,99,0.55);
+  box-shadow: 0 0 0 4px rgba(95,127,99,0.12);
+}
+
+/* El botón ya es .btn.primary desde el HTML */
+/* Solo centrado opcional */
+.contact-form .btn{
+  width: 100%;
+  justify-content: center;
+}
+
+/* ===================================================== */
+/* FIN FORMULARIO                                        */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO RESPONSIVE                                     */
+/* ===================================================== */
+
+@media (max-width: 900px){
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px){
+
+  .page-wrapper{
+    margin: 40px auto 60px;
+    padding: 0 16px;
+  }
+
+  .contact-card{
+    padding: 34px 20px;
+    border-radius: 28px;
+  }
+
+  .section-title{
+    font-size: 1.9rem;
+  }
+
+  .section-subtitle{
+    font-size: 1.0rem;
+    margin-bottom: 22px;
+  }
+
+  .contact-info{
+    border-radius: 18px;
+  }
+}
+
+/* ===================================================== */
+/* FIN RESPONSIVE                                        */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* FIN CSS PÁGINA: contacto.html                         */
+/* ===================================================== */
