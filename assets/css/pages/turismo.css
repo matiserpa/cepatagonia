@@ -1,118 +1,122 @@
-/* ===================== */
-/* INICIO CSS PÁGINA: turismo.html */
-/* Función: estilos específicos de esta página */
-/* ===================== */
-
-/* (removido del CSS de página: :root ) */
+/* ===================================================== */
+/* INICIO CSS PÁGINA: turismo.html                       */
+/* Función: layout + cards + listas + subtítulo          */
+/* ===================================================== */
 
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }/* (removido del CSS de página: body ) */
+/* ===================================================== */
+/* INICIO CONTENIDO                                      */
+/* ===================================================== */
+
+.page-wrapper{
+  max-width: 1000px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+}
+
+/* Título */
+.section-title{
+  text-align: center;
+  font-family: var(--fuente-titulos);
+  font-size: 2.1rem;
+  color: var(--verde-principal);
+  margin: 0 0 30px;
+  line-height: 1.25;
+}
+
+/* Subtítulo dentro del h1 */
+.section-title .subtitle{
+  display: block;
+  margin-top: 10px;
+  font-family: var(--fuente-texto);
+  font-size: 1.05rem;
+  color: var(--texto-secundario);
+  letter-spacing: 0.5px;
+}
+
+/* Cards */
+.tour-card{
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px 22px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(95,127,99,0.16);
+}
+
+.tour-card h3{
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  color: var(--verde-principal);
+  margin: 0 0 10px;
+}
+
+.tour-card p{
+  font-family: var(--fuente-texto);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--texto-secundario);
+  margin: 0 0 12px;
+}
+
+.tour-card p:last-child{
+  margin-bottom: 0;
+}
+
+.tour-card p strong{
+  color: var(--texto-principal);
+}
+
+/* Listas (para traslados y excursiones) */
+.tour-list{
+  margin: 10px 0 14px;
+  padding-left: 18px;
+}
+
+.tour-list li{
+  margin: 8px 0;
+  color: var(--texto-secundario);
+  line-height: 1.6;
+}
+
+/* ===================================================== */
+/* FIN CONTENIDO                                         */
+/* ===================================================== */
 
 
-  
+/* ===================================================== */
+/* INICIO RESPONSIVE                                     */
+/* ===================================================== */
+@media (max-width: 768px){
 
-
-
-
-    /* ================= CONTENIDO ================= */
-    .page-wrapper {
-      max-width: 1000px;
-      margin: 170px auto 80px;
-      padding: 40px 30px;
-      background: #ffffff;
-      border-radius: 32px;
-      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
-    }
-
-    .section-title {
-      text-align: center;
-      color: var(--color-principal);
-      font-family: var(--fuente-titulos);
-      font-size: 2.1rem;
-      margin-bottom: 30px;
-    }
-
-    .tour-card {
-      background: var(--color-fondo);
-      border-radius: 18px;
-      padding: 18px;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-    }
-
-    .tour-card h3 {
-      font-size: 1.1rem;
-      color: var(--color-principal);
-      margin-bottom: 6px;
-      font-family: var(--fuente-titulos);
-    }
-
-    .tour-card p {
-      font-size: 0.96rem;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        padding: 8px 14px;
-      }
-
-      nav ul {
-        gap: 10px;
-        font-size: 0.85rem;
-      }
-
-      .page-wrapper {
-        margin: 155px 18px 50px;
-        padding: 28px 20px;
-      }
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
-body ) */
-/* (removido del CSS de página: /* Header más amigable en cel */
-@media (max-width: 768px) ) */
-
-/* === Ajuste extra de separación en versión móvil === */
-@media (max-width: 768px) {
-  .page-wrapper {
-    margin-top: 200px !important; /* Aumentamos la separación */
+  .page-wrapper{
+    margin: 40px auto 60px;
+    padding: 0 16px;
   }
-}/* (removido del CSS de página: /* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header ) */
-/* (removido del CSS de página: .header-inner ) */
-/* (removido del CSS de página: .logo-box img ) */
 
+  .section-title{
+    font-size: 1.85rem;
+    margin-bottom: 22px;
+  }
 
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
+  .section-title .subtitle{
+    font-size: 1.0rem;
+  }
+
+  .tour-card{
+    padding: 18px 18px;
+    border-radius: 18px;
+  }
+
+  .tour-card h3{
+    font-size: 1.12rem;
+  }
 }
+/* ===================================================== */
+/* FIN RESPONSIVE                                        */
+/* ===================================================== */
 
-nav a{
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
-}
 
-nav a:hover{
-  opacity: 0.8;
-}
-/* ====================== FIN HEADER (BASE) ====================== */
-
-/* ===================== */
-/* FIN CSS PÁGINA: turismo.html */
-/* ===================== */
+/* ===================================================== */
+/* FIN CSS PÁGINA: turismo.html                          */
+/* ===================================================== */
