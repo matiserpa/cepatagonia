@@ -32,24 +32,46 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 // =================== FIN HEADER INCLUDE ====================
 
-// ===== MODAL ADQUIRÍ TU PASE =====
+// ================= MODAL ADQUIRÍ TU PASE =================
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.querySelector(".btn.primary");
+  const btn = document.getElementById("btn-pase");
   const modal = document.getElementById("modal-pase");
   const cerrar = document.getElementById("cerrar-modal");
 
-  if (!btn || !modal || !cerrar) return;
+  if (!btn || !modal || !cerrar) {
+    console.warn("Modal: faltan elementos (btn-pase / modal-pase / cerrar-modal)");
+    return;
+  }
+
+  const abrirModal = () => {
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+  };
+
+  const cerrarModal = () => {
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+  };
 
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    modal.classList.add("show");
+    abrirModal();
   });
 
-  cerrar.addEventListener("click", () => {
-    modal.classList.remove("show");
+  cerrar.addEventListener("click", cerrarModal);
+
+  // Cerrar clickeando fuera de la caja
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) cerrarModal();
+  });
+
+  // Cerrar con ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("show")) cerrarModal();
   });
 });
-// ===== FIN MODAL ADQUIRÍ TU PASE =====
+// ================= FIN MODAL =================
+
 
 // ===== FORZAR SCROLL ARRIBA AL RECARGAR =====
 window.onbeforeunload = function () {
