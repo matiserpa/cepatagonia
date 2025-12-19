@@ -1,83 +1,103 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Información – CEPATAGONIA</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Información – CEPATAGONIA</title>
 
+  <!-- ===================== INICIO FONTS ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ====================== FIN FONTS ====================== -->
 
-<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/informacion.css" rel="stylesheet"/><script defer src="main.js"></script></head>
+  <!-- ===================== INICIO CSS GLOBAL ===================== -->
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS GLOBAL ====================== -->
+
+  <!-- ===================== INICIO CSS PÁGINA ===================== -->
+  <link href="assets/css/pages/informacion.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS PÁGINA ====================== -->
+
+  <!-- ===================== INICIO JS ===================== -->
+  <script defer src="main.js"></script>
+  <!-- ====================== FIN JS ====================== -->
+</head>
+
 <body>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
 
-<div id="header-placeholder"></div>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- Función: carga header.html para no repetir código en cada página -->
-      <!-- ===================================================== -->
-<!-- INICIO HEADER GLOBAL -->
-<!-- Función: Header único (navbar) para todas las páginas -->
-<!-- Estilo: Apple blur + paleta verde desde CSS global    -->
-<!-- ===================================================== -->
-
-<header class="site-header apple-header">
-  <div class="header-container">
-
-    <!-- INICIO LOGO -->
-    <a href="index.html" class="logo" aria-label="Inicio">
-      <img src="LogoEsteticaB.png" alt="Cepa Patagonia Logo">
-    </a>
-    <!-- FIN LOGO -->
-
-    <!-- INICIO NAV -->
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="programa.html">Programa</a>
-      <a href="expositores.html">Expositores</a>
-      <a href="informacion.html">Información</a>
-      <a href="turismo.html">Turismo</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-    <!-- FIN NAV -->
-
-  </div>
-</header>
-
-<!-- ===================================================== -->
-<!-- FIN HEADER GLOBAL -->
-<!-- ===================================================== -->
+  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+  <!-- Función: carga header.html para no repetir código en cada página -->
+  <div id="header-placeholder"></div>
+  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
 
 
-<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
-<!-- ================= HEADER ================= -->
+  <!-- ================= CONTENIDO INFORMACIÓN ================= -->
+  <main class="page-wrapper">
+    <div class="card info-card">
 
-<!-- ============ FIN HEADER ============ -->
-<!-- ================= CONTENIDO INFORMACIÓN ================= -->
-<main class="page-wrapper">
-<h1 class="section-title">Información General</h1>
-<p>
-      El Congreso de Estética de la Patagonia se realizará en San Martín de los Andes, en un entorno natural único
-      rodeado de montañas, lagos y bosques nativos.
-    </p>
-<p><strong>Sede oficial:</strong> Hotel Patagonia Plaza</p>
-<p><strong>Dirección:</strong> Av. San Martín 502</p>
-<p><strong>Horarios de acreditación:</strong> 09:00 h del día 11 de octubre</p>
-<p>
-      El Congreso está orientado a profesionales de la estética, cosmiatría, kinesiología, biología cutánea y áreas
-      afines que deseen actualizarse en Estética Celular Avanzada, biotecnología y nuevas tecnologías aplicadas al
-      cuidado de la piel.
-    </p>
-<p>
-      Se entregará certificado digital oficial de asistencia.
-    </p>
-</main>
-<!-- ============ FIN CONTENIDO INFORMACIÓN ============ -->
-<!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
-<!-- Función: inserta header.html dentro de #header-placeholder -->
+      <h1 class="section-title">Información General</h1>
 
-<!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
+      <!-- ===================== -->
+      <!-- INICIO DESCRIPCIÓN -->
+      <!-- ===================== -->
+      <p>
+        El Congreso de Estética de la Patagonia se realizará en <strong>San Martín de los Andes</strong>, en un entorno natural único
+        rodeado de montañas, lagos y bosques nativos.
+      </p>
+      <!-- ===================== -->
+      <!-- FIN DESCRIPCIÓN -->
+      <!-- ===================== -->
+
+      <!-- ===================== -->
+      <!-- INICIO DATOS CLAVE -->
+      <!-- ===================== -->
+      <div class="info-block">
+        <h2>Datos clave</h2>
+        <ul class="info-list">
+          <li><strong>Sede oficial:</strong> Hotel Patagonia Plaza</li>
+          <li><strong>Dirección:</strong> Av. San Martín 502</li>
+          <li><strong>Fechas:</strong> 10 y 11 de Octubre 2026</li>
+          <li><strong>Horarios de acreditación:</strong> 09:00 h (día 11 de octubre)</li>
+          <li><strong>Certificación:</strong> se entregará certificado digital oficial de asistencia</li>
+        </ul>
+      </div>
+      <!-- ===================== -->
+      <!-- FIN DATOS CLAVE -->
+      <!-- ===================== -->
+
+      <!-- ===================== -->
+      <!-- INICIO A QUIÉN ESTÁ DIRIGIDO -->
+      <!-- ===================== -->
+      <div class="info-block">
+        <h2>¿A quién está dirigido?</h2>
+        <p>
+          Está orientado a profesionales de la estética, cosmiatría, kinesiología, biología cutánea y áreas afines
+          que deseen actualizarse en <strong>Estética Celular Avanzada</strong>, biotecnología y nuevas tecnologías aplicadas al cuidado de la piel.
+        </p>
+      </div>
+      <!-- ===================== -->
+      <!-- FIN A QUIÉN ESTÁ DIRIGIDO -->
+      <!-- ===================== -->
+
+      <!-- ===================== -->
+      <!-- INICIO CONTACTO RÁPIDO -->
+      <!-- ===================== -->
+      <div class="info-cta">
+        <p class="cta-text">¿Querés más info o recibir el programa completo?</p>
+        <a class="btn primary"
+           href="https://wa.me/5491131888164?text=Hola%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20el%20Congreso"
+           target="_blank" rel="noopener">
+          Consultar por WhatsApp
+        </a>
+      </div>
+      <!-- ===================== -->
+      <!-- FIN CONTACTO RÁPIDO -->
+      <!-- ===================== -->
+
+    </div>
+  </main>
+  <!-- ============ FIN CONTENIDO INFORMACIÓN ============ -->
+
 </body>
 </html>
