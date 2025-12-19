@@ -1,131 +1,109 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>CEPATAGONIA – Congreso de Estética de la Patagonia 2026</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>CEPATAGONIA – Congreso de Estética de la Patagonia 2026</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
-<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/index.css" rel="stylesheet"/><script defer src="main.js"></script></head>
+  <!-- ===================== INICIO CSS GLOBAL ===================== -->
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS GLOBAL ====================== -->
+
+  <!-- ===================== INICIO CSS PÁGINA ===================== -->
+  <link href="assets/css/pages/index.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS PÁGINA ====================== -->
+
+  <!-- ===================== INICIO JS ===================== -->
+  <script defer src="main.js"></script>
+  <!-- ====================== FIN JS ====================== -->
+</head>
+
 <body>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-          <!-- ===================================================== -->
-<!-- INICIO HEADER GLOBAL -->
-<!-- Función: Header único (navbar) para todas las páginas -->
-<!-- Estilo: Apple blur + paleta verde desde CSS global    -->
-<!-- ===================================================== -->
 
-<header class="site-header apple-header">
-  <div class="header-container">
+  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+  <!-- Función: carga header.html para no repetir código en cada página -->
+  <div id="header-placeholder"></div>
+  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
 
-    <!-- INICIO LOGO -->
-    <a href="index.html" class="logo" aria-label="Inicio">
-      <img src="LogoEsteticaB.png" alt="Cepa Patagonia Logo">
-    </a>
-    <!-- FIN LOGO -->
 
-    <!-- INICIO NAV -->
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="programa.html">Programa</a>
-      <a href="expositores.html">Expositores</a>
-      <a href="informacion.html">Información</a>
-      <a href="turismo.html">Turismo</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-    <!-- FIN NAV -->
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h3>1ra EDICIÓN</h3>
+      <h1>BIENVENIDOS</h1>
+      <h4>Congreso de Estética de la Patagonia 2026</h4>
+    </div>
+  </section>
+  <!-- ============ FIN HERO ============ -->
 
-  </div>
-</header>
 
-<!-- ===================================================== -->
-<!-- FIN HEADER GLOBAL -->
-<!-- ===================================================== -->
+  <!-- ================= INTRO ================= -->
+  <section class="intro-section">
+    <div class="intro-wrap">
+      <h2>10 y 11 de Octubre 2026</h2>
+      <p>Donde la ciencia y la estética se encuentran para regenerar el futuro.</p>
+      <div class="save">SAVE THE DATE</div>
 
-<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
+      <div class="btn-box">
+        <button class="btn primary">ADQUIRÍ TU PASE</button>
 
-<div id="header-placeholder"></div>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- Función: carga header.html para no repetir código en cada página -->
-
-<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
-<!-- ================= HEADER ================= -->
-<!-- ============ FIN HEADER ============ -->
-<!-- ================= HERO ================= -->
-<section class="hero" id="inicio">
-<div class="hero-overlay"></div>
-<div class="hero-content">
-<h3>1ra EDICIÓN</h3>
-<h1>BIENVENIDOS</h1>
-<h4>Congreso de Estética de la Patagonia 2026</h4>
-</div>
-</section>
-<!-- ============ FIN HERO ============ -->
-<!-- ================= INTRO ================= -->
-<section class="intro-section">
-<div class="intro-wrap">
-<h2>10 y 11 de Octubre 2026</h2>
-<p>Donde la ciencia y la estética se encuentran para regenerar el futuro.</p>
-<div class="save">SAVE THE DATE</div>
-<div class="btn-box">
-<button class="btn primary">ADQUIRÍ TU PASE</button>
-<!-- WHATSAPP -->
-<a class="btn secondary" href="https://wa.me/5491131888164?text=Hola%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20el%20Congreso" target="_blank">
+        <!-- WHATSAPP -->
+        <a class="btn secondary"
+           href="https://wa.me/5491131888164?text=Hola%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20el%20Congreso"
+           target="_blank" rel="noopener">
           ASESORATE
         </a>
-</div>
-</div>
-</section>
-<!-- ============ FIN INTRO ============ -->
-<!-- ========================= [SECCIÓN VIDEO] ========================= -->
-<!-- =====================================================
-[VIMEO – VIDEO PRINCIPAL (AUTOPLAY MUTE + RESPONSIVE)]
-Archivo: index.html
-Ubicación: dentro de <section class="video-section">
-===================================================== -->
-<div class="video-wrapper video-wrapper--small">
-<iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" loading="lazy" src="https://player.vimeo.com/video/1146762024?autoplay=1&amp;muted=1&amp;loop=1&amp;autopause=0&amp;title=0&amp;byline=0&amp;portrait=0" title="Video Congreso Estética Patagonia">
-</iframe>
-</div>
-<!-- =============== FIN [VIDEO VIMEO] ================= -->
-<!-- ================= PROPUESTA DE VALOR ================= -->
-<section class="valor-section">
-<p>
+      </div>
+    </div>
+  </section>
+  <!-- ============ FIN INTRO ============ -->
+
+
+  <!-- ================= VIDEO HERO ================= -->
+  <!-- Función: contenedor único para video (Vimeo/YouTube) -->
+  <div class="hero-video">
+    <iframe
+      src="https://player.vimeo.com/video/1146762024?autoplay=1&muted=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
+      title="Video Congreso Estética Patagonia"
+      allow="autoplay; fullscreen; picture-in-picture"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <!-- =============== FIN VIDEO HERO ================= -->
+
+
+  <!-- ================= PROPUESTA DE VALOR ================= -->
+  <section class="valor-section">
+    <p>
       El Congreso de Estética de la Patagonia marca un punto de inflexión en la profesión: mientras la estética
       tradicional se enfocó en la superficie, este encuentro pone el foco donde realmente comienza todo: las células.
     </p>
-<p>
+
+    <p>
       Aquí nace la nueva era de la Estética Celular Avanzada, donde la ciencia, la innovación y la biología cutánea
       redefinen los resultados posibles en un gabinete.
     </p>
-<p>
+
+    <p>
       Exploramos tecnologías que actúan a nivel molecular, avances en medicina regenerativa, biorregeneración y
       técnicas no invasivas que hoy están transformando el futuro de la estética.
     </p>
-<p>
+
+    <p>
       Este Congreso no es solo capacitación: es una plataforma para potenciar tu crecimiento profesional y
       posicionarte en la próxima generación de la estética.
     </p>
-<p><strong>Networking con líderes:</strong> conectá con referentes, expertos y empresas clave.</p>
-<p><strong>Oportunidades de negocio:</strong> ampliá tu red y generá alianzas estratégicas que impulsan tus
-      ventas.</p>
-<p><strong>Validación profesional:</strong> obtené un Diploma de Asistencia que te destaca y respalda tus nuevas
-      habilidades.</p>
-</section>
-<!-- ============ FIN PROPUESTA DE VALOR ============ -->
-<script>
-    // EFECTO APPLE EN HEADER
-    window.addEventListener("scroll", function () {
-      const header = document.getElementById("header");
-      header.classList.toggle("scrolled", window.scrollY > 40);
-    });
-  </script>
-<!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
-<!-- Función: inserta header.html dentro de #header-placeholder -->
 
-<!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
+    <p><strong>Networking con líderes:</strong> conectá con referentes, expertos y empresas clave.</p>
+    <p><strong>Oportunidades de negocio:</strong> ampliá tu red y generá alianzas estratégicas que impulsan tus ventas.</p>
+    <p><strong>Validación profesional:</strong> obtené un Diploma de Asistencia que te destaca y respalda tus nuevas habilidades.</p>
+  </section>
+  <!-- ============ FIN PROPUESTA DE VALOR ============ -->
+
 </body>
 </html>
