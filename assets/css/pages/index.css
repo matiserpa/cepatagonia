@@ -57,6 +57,54 @@
 /* FIN HERO                                              */
 /* ===================================================== */
 
+/* ===================================================== */
+/* INICIO AJUSTES HERO TEXTO (más claro + pro)           */
+/* ===================================================== */
+
+.hero-content{
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 18px 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.35);
+  text-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.hero-content h3{
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hero-content h1{
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.hero-content h4{
+  font-size: 1.05rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .hero{ padding-top: 130px; }
+  .hero-content{ padding: 14px 16px; border-radius: 18px; }
+}
+
+/* ===================================================== */
+/* FIN AJUSTES HERO TEXTO                                */
+/* ===================================================== */
+
+
 
 /* ===================================================== */
 /* INICIO INTRO                                          */
