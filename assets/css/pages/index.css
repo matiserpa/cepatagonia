@@ -245,8 +245,70 @@
   font-weight: 700;
 }
 
+
 /* ===================================================== */
 /* FIN PROPUESTA DE VALOR                                */
+/* ===================================================== */
+
+/* ===================================================== */
+/* INICIO FAQ                                             */
+/* ===================================================== */
+
+.faq-section{
+  padding: 20px 0 80px;
+}
+
+.faq-card{
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0px 12px 28px rgba(0,0,0,0.10);
+  padding: 40px 34px;
+  border: 1px solid rgba(95,127,99,0.16);
+}
+
+.faq-title{
+  font-family: var(--fuente-titulos);
+  color: var(--verde-principal);
+  text-align: center;
+  font-size: 2.0rem;
+  margin: 0 0 18px;
+}
+
+.faq-item{
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 14px 0;
+}
+
+.faq-item:first-of-type{
+  border-top: none;
+}
+
+.faq-item summary{
+  cursor: pointer;
+  font-family: var(--fuente-titulos);
+  color: var(--texto-principal);
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.faq-item p{
+  margin: 10px 0 0;
+  color: var(--texto-secundario);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px){
+  .faq-card{
+    padding: 28px 20px;
+    border-radius: 28px;
+  }
+  .faq-title{ font-size: 1.7rem; }
+}
+
+/* ===================================================== */
+/* FIN FAQ                                               */
 /* ===================================================== */
 
 
