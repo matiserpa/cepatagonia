@@ -1,30 +1,40 @@
 /* ===================================================== */
-/* INICIO BASE GLOBAL                                    */
-/* Función: estilos compartidos + header único + paleta */
+/* BASE GLOBAL – CEPATAGONIA                             */
+/* Función: paleta, layout, header único, botones        */
+/* Versión: estable para presentación                    */
 /* ===================================================== */
 
-/* ===================== */
-/* PALETA GLOBAL (VERDE) */
-/* ===================== */
+
+/* ===================================================== */
+/* VARIABLES GLOBALES (COMPAT + LOOK ORIGINAL)            */
+/* ===================================================== */
 :root{
-  --bg: #07110d;
-  --surface: rgba(255,255,255,.04);
+  /* Colores originales */
+  --color-fondo: #f2efe6;          /* beige base */
+  --verde-profundo: #2f4a36;       /* verde textos */
+  --color-principal: #3bd17a;      /* verde acento */
 
-  --text: #eaf3ee;
-  --muted: rgba(234,243,238,.70);
+  /* Texto */
+  --text: #1a1a1a;
+  --muted: rgba(0,0,0,.65);
 
-  --border: rgba(59,209,122,.22);
+  /* Tipografías */
+  --fuente-titulos: "Cinzel", serif;
+  --fuente-texto: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 
-  --accent: #3bd17a;
-  --accent-2: #1ea85c;
-
-  --glass: rgba(7, 17, 13, 0.55);
+  /* Header glass */
+  --glass: rgba(7, 17, 13, 0.60);
   --glass-border: rgba(59,209,122,.22);
 
-  --container: 1200px;
+  /* UI */
+  --border: rgba(47,74,54,.20);
   --radius: 18px;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
 
+  /* Layout */
+  --container: 1200px;
+
+  /* Spacing */
   --s1: 8px;
   --s2: 12px;
   --s3: 16px;
@@ -32,50 +42,63 @@
   --s5: 32px;
 }
 
-/* ===================== */
-/* RESET + BASE          */
-/* ===================== */
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
+
+/* ===================================================== */
+/* RESET + BASE                                          */
+/* ===================================================== */
+*{ box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+}
 
 body{
-  margin:0;
-  background:
-    radial-gradient(1200px 700px at 20% 10%, rgba(59,209,122,.10), transparent 55%),
-    radial-gradient(900px 600px at 80% 20%, rgba(30,168,92,.10), transparent 60%),
-    var(--bg);
+  margin: 0;
+  background: var(--color-fondo);   /* ✅ beige restaurado */
   color: var(--text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height:1.5;
+  font-family: var(--fuente-texto);
+  line-height: 1.55;
 }
 
-img{ max-width:100%; height:auto; display:block; }
-a{ color:inherit; }
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-/* ===================== */
-/* LAYOUT                */
-/* ===================== */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ===================================================== */
+/* LAYOUT                                                */
+/* ===================================================== */
 .container{
   width: min(100% - 32px, var(--container));
-  margin-inline:auto;
+  margin-inline: auto;
 }
 
-.section{ padding: 56px 0; }
+.section{
+  padding: 56px 0;
+}
 
 .card{
-  background: var(--surface);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: var(--s4);
 }
 
-/* ===================== */
-/* HEADER APPLE (GLOBAL) */
-/* ===================== */
+
+/* ===================================================== */
+/* HEADER APPLE (ÚNICO)                                  */
+/* ===================================================== */
 .site-header.apple-header{
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 1000;
 
   background: var(--glass);
@@ -87,98 +110,102 @@ a{ color:inherit; }
 
 .header-container{
   width: min(100% - 32px, var(--container));
-  margin-inline:auto;
+  margin-inline: auto;
   padding: 14px 0;
 
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: var(--s4);
 }
 
 .logo{
-  display:inline-flex;
-  align-items:center;
-  text-decoration:none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .logo img{
   height: 38px;
-  width:auto;
-  filter: brightness(0) invert(1);
+  width: auto;
+  filter: brightness(0) invert(1); /* logo blanco sobre glass */
 }
 
 .nav{
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   gap: 22px;
 }
 
 .nav a{
-  text-decoration:none;
   font-weight: 600;
-  opacity:.86;
-  padding: 10px 10px;
+  letter-spacing: 0.5px;
+  padding: 10px 12px;
   border-radius: 12px;
-  transition: opacity .2s ease, background .2s ease, transform .2s ease;
+  color: #eaf3ee;
+  transition: background .2s ease, transform .2s ease, opacity .2s ease;
 }
 
 .nav a:hover{
-  opacity:1;
-  background: rgba(59,209,122,.10);
+  background: rgba(59,209,122,.12);
   transform: translateY(-1px);
 }
 
-/* ===================== */
-/* BOTONES               */
-/* ===================== */
+
+/* ===================================================== */
+/* BOTONES                                               */
+/* ===================================================== */
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
-  padding: 12px 16px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: 2px solid var(--color-principal);
 
-  background: rgba(255,255,255,.06);
-  color: var(--text);
-  text-decoration:none;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
 
-  transition: transform .2s ease, background .2s ease, opacity .2s ease;
-}
-
-.btn:hover{
-  background: rgba(255,255,255,.10);
-  transform: translateY(-1px);
+  background: transparent;
+  color: var(--color-principal);
+  transition: background .2s ease, color .2s ease, transform .2s ease;
 }
 
 .btn.primary{
-  border-color: rgba(59,209,122,.35);
-  background: rgba(59,209,122,.14);
+  background: var(--color-principal);
+  color: #ffffff;
 }
 
-/* ===================== */
-/* RESPONSIVE            */
-/* ===================== */
+.btn.primary:hover{
+  background: #2fa968;
+}
+
+.btn.secondary:hover{
+  background: var(--color-principal);
+  color: #ffffff;
+}
+
+
+/* ===================================================== */
+/* RESPONSIVE                                            */
+/* ===================================================== */
 @media (max-width: 768px){
+
   .header-container{
     padding: 12px 0;
     gap: var(--s3);
   }
 
   .nav{
-    gap: 10px;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: flex-end;
   }
 
-  .nav a{ padding: 9px 10px; }
-  .section{ padding: 40px 0; }
-}
+  .section{
+    padding: 40px 0;
+  }
 
-/* ===================================================== */
-/* FIN BASE GLOBAL                                      */
-/* ===================================================== */
+}
