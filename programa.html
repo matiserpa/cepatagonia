@@ -1,98 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Programa – CEPATAGONIA</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Programa – CEPATAGONIA</title>
 
+  <!-- ===================== INICIO FONTS ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ====================== FIN FONTS ====================== -->
 
-<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/programa.css" rel="stylesheet"/><script defer src="main.js"></script></head>
+  <!-- ===================== INICIO CSS GLOBAL ===================== -->
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS GLOBAL ====================== -->
+
+  <!-- ===================== INICIO CSS PÁGINA ===================== -->
+  <link href="assets/css/pages/programa.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS PÁGINA ====================== -->
+
+  <!-- ===================== INICIO JS ===================== -->
+  <script defer src="main.js"></script>
+  <!-- ====================== FIN JS ====================== -->
+</head>
+
 <body>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
 
-<div id="header-placeholder"></div>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- Función: carga header.html para no repetir código en cada página -->
-  <!-- ===================================================== -->
-<!-- INICIO HEADER GLOBAL -->
-<!-- Función: Header único (navbar) para todas las páginas -->
-<!-- Estilo: Apple blur + paleta verde desde CSS global    -->
-<!-- ===================================================== -->
-
-<header class="site-header apple-header">
-  <div class="header-container">
-
-    <!-- INICIO LOGO -->
-    <a href="index.html" class="logo" aria-label="Inicio">
-      <img src="LogoEsteticaB.png" alt="Cepa Patagonia Logo">
-    </a>
-    <!-- FIN LOGO -->
-
-    <!-- INICIO NAV -->
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="programa.html">Programa</a>
-      <a href="expositores.html">Expositores</a>
-      <a href="informacion.html">Información</a>
-      <a href="turismo.html">Turismo</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-    <!-- FIN NAV -->
-
-  </div>
-</header>
-
-<!-- ===================================================== -->
-<!-- FIN HEADER GLOBAL -->
-<!-- ===================================================== -->
+  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+  <!-- Función: carga header.html para no repetir código en cada página -->
+  <div id="header-placeholder"></div>
+  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
 
 
-<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
-<!-- ================= HEADER ================= -->
+  <!-- ================= CONTENIDO PROGRAMA ================= -->
+  <main class="page-wrapper">
+    <div class="card">
+      <h1>Programa del Congreso</h1>
+      <p class="sub">Cronograma tentativo de conferencias, workshops y actividades.</p>
 
-<!-- ============ FIN HEADER ============ -->
-<!-- ================= CONTENIDO PROGRAMA ================= -->
-<main class="page-wrapper">
-<div class="card">
-<h1>Programa del Congreso</h1>
-<p class="sub">Cronograma tentativo de conferencias, workshops y actividades.</p>
-<table>
-<tr>
-<th>Horario</th>
-<th>Actividad</th>
-<th>Disertante</th>
-</tr>
-<tr>
-<td>09:00 – 09:30</td>
-<td>Acreditación</td>
-<td>-</td>
-</tr>
-<tr>
-<td>09:30 – 10:30</td>
-<td>Biología cutánea avanzada</td>
-<td>Dra. Andrea Gómez</td>
-</tr>
-<tr>
-<td>10:30 – 11:15</td>
-<td>Biorregeneración facial</td>
-<td>Dra. Marcela Ruiz</td>
-</tr>
-<tr>
-<td>11:15 – 12:00</td>
-<td>Café y Networking</td>
-<td>-</td>
-</tr>
-</table>
-</div>
-</main>
-<!-- ============ FIN CONTENIDO PROGRAMA ============ -->
-<!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
-<!-- Función: inserta header.html dentro de #header-placeholder -->
+      <table>
+        <tr>
+          <th>Horario</th>
+          <th>Actividad</th>
+          <th>Disertante</th>
+        </tr>
+        <tr>
+          <td>09:00 – 09:30</td>
+          <td>Acreditación</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>09:30 – 10:30</td>
+          <td>Biología cutánea avanzada</td>
+          <td>Dra. Andrea Gómez</td>
+        </tr>
+        <tr>
+          <td>10:30 – 11:15</td>
+          <td>Biorregeneración facial</td>
+          <td>Dra. Marcela Ruiz</td>
+        </tr>
+        <tr>
+          <td>11:15 – 12:00</td>
+          <td>Café y Networking</td>
+          <td>-</td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <!-- ============ FIN CONTENIDO PROGRAMA ============ -->
 
-<!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
 </body>
 </html>
