@@ -9,8 +9,9 @@
 
 .hero{
   height: 92vh;
-  /* ✅ Ruta recomendada: si DJI_0215.jpg está en la raíz junto a index.html */
-  background: url("../../DJI_0215.jpg") top center / cover no-repeat;
+
+  /* ✅ CORRECTO para tu estructura actual */
+  background: url("../../../DJI_0215.jpg") top center / cover no-repeat;
 
   display: flex;
   align-items: center;
@@ -18,13 +19,10 @@
 
   position: relative;
   color: #ffffff;
-
-  /* Si usás header FIXED en styles.css, este padding ayuda.
-     Si usás sticky, igual no molesta. */
   padding-top: 110px;
-
   overflow: hidden;
 }
+
 
 .hero-overlay{
   background: rgba(0, 0, 0, 0.15);
