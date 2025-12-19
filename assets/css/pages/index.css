@@ -311,6 +311,32 @@
 /* FIN FAQ                                               */
 /* ===================================================== */
 
+/* ===================================================== */
+/* INICIO TÍTULO VIDEO                                  */
+/* ===================================================== */
+
+.video-heading{
+  text-align: center;
+  font-family: var(--fuente-titulos);
+  font-size: 2rem;
+  color: var(--verde-principal);
+  margin: 60px auto 22px;
+  letter-spacing: 1px;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .video-heading{
+    font-size: 1.6rem;
+    margin: 45px auto 18px;
+  }
+}
+
+/* ===================================================== */
+/* FIN TÍTULO VIDEO                                     */
+/* ===================================================== */
+
+
 
 /* ===================================================== */
 /* FIN CSS PÁGINA: index.html                            */
