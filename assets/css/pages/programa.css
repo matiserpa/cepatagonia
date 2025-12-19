@@ -1,140 +1,112 @@
-/* ===================== */
-/* INICIO CSS PÁGINA: programa.html */
-/* Función: estilos específicos de esta página */
-/* ===================== */
-
-/* (removido del CSS de página: :root ) */
+/* ===================================================== */
+/* INICIO CSS PÁGINA: programa.html                      */
+/* Función: estilos específicos del contenido Programa   */
+/* ===================================================== */
 
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }/* (removido del CSS de página: body ) */
+/* ===================================================== */
+/* INICIO CONTENIDO                                      */
+/* ===================================================== */
 
-
- 
-
-
-
-
-    /* ================= CONTENIDO ================= */
-    .page-wrapper {
-      max-width: 1100px;
-      margin: 170px auto 80px;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: var(--color-blanco);
-      border-radius: 30px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
-      padding: 45px 40px 40px;
-    }
-
-    h1 {
-      font-family: var(--fuente-titulos);
-      font-size: 2.7rem;
-      color: var(--color-principal);
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    p.sub {
-      text-align: center;
-      font-size: 1.05rem;
-      margin-bottom: 35px;
-      color: #555;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.98rem;
-    }
-
-    th,
-    td {
-      padding: 14px 16px;
-      border-bottom: 1px solid #eee;
-    }
-
-    th {
-      background-color: var(--color-principal);
-      color: var(--color-blanco);
-      font-family: var(--fuente-titulos);
-      font-size: 1.05rem;
-      text-align: left;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tr:nth-child(even) td {
-      background-color: #fafafa;
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        padding: 8px 14px;
-      }
-
-      nav ul {
-        gap: 10px;
-        font-size: 0.85rem;
-      }
-
-      .page-wrapper {
-        margin-top: 150px;
-      }
-
-      .card {
-        padding: 30px 18px 25px;
-      }
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
-body ) */
-/* (removido del CSS de página: /* Header más amigable en cel */
-@media (max-width: 768px) ) */
-
-/* === Ajuste extra de separación en versión móvil === */
-@media (max-width: 768px) {
-  .page-wrapper {
-    margin-top: 200px !important; /* Aumentamos la separación */
-  }
-}/* (removido del CSS de página: /* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header ) */
-/* (removido del CSS de página: .header-inner ) */
-/* (removido del CSS de página: .logo-box img ) */
-
-
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
+.page-wrapper{
+  max-width: 1100px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
 }
 
-nav a{
-  text-decoration: none;
-  font-weight: 600;
+/* Usamos la card global, solo ajustamos tamaños si hace falta */
+.page-wrapper .card{
+  border-radius: 40px;
+  padding: 50px 40px 40px;
+}
+
+/* Título principal */
+.page-wrapper h1{
+  font-family: var(--fuente-titulos);
+  font-size: 2.7rem;
+  color: var(--verde-principal);
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+/* Subtítulo */
+.page-wrapper .sub{
+  text-align: center;
+  font-size: 1.05rem;
+  margin: 0 0 35px;
+  color: var(--texto-secundario);
+}
+
+/* Tabla */
+.page-wrapper table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+
+.page-wrapper th,
+.page-wrapper td{
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.page-wrapper th{
+  background-color: var(--verde-principal);
+  color: #ffffff;
+  font-family: var(--fuente-titulos);
+  font-size: 1.05rem;
+  text-align: left;
   letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
 }
 
-nav a:hover{
-  opacity: 0.8;
+.page-wrapper tr:nth-child(even) td{
+  background-color: rgba(255,255,255,0.55);
 }
-/* ====================== FIN HEADER (BASE) ====================== */
 
-/* ===================== */
-/* FIN CSS PÁGINA: programa.html */
-/* ===================== */
+.page-wrapper tr:last-child td{
+  border-bottom: none;
+}
+
+/* ===================================================== */
+/* FIN CONTENIDO                                         */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO RESPONSIVE                                     */
+/* ===================================================== */
+@media (max-width: 768px){
+
+  .page-wrapper{
+    margin: 40px auto 60px;
+    padding: 0 16px;
+  }
+
+  .page-wrapper .card{
+    padding: 34px 20px 26px;
+    border-radius: 28px;
+  }
+
+  .page-wrapper h1{
+    font-size: 2.0rem;
+  }
+
+  .page-wrapper .sub{
+    font-size: 1.0rem;
+    margin-bottom: 22px;
+  }
+
+  .page-wrapper th,
+  .page-wrapper td{
+    padding: 12px 12px;
+    font-size: 0.95rem;
+  }
+}
+/* ===================================================== */
+/* FIN RESPONSIVE                                        */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* FIN CSS PÁGINA: programa.html                          */
+/* ===================================================== */
