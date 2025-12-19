@@ -32,27 +32,34 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 // =================== FIN HEADER INCLUDE ====================
 
-// ================= MODAL PRÓXIMAMENTE =================
+// ================= MODAL ADQUIRÍ TU PASE =================
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("btn-pase");
-  const modal = document.getElementById("modal-proximamente");
-  const ok = document.getElementById("modal-ok");
-  const backdrop = modal?.querySelector(".modal-backdrop");
 
-  if (!btn || !modal) return;
+  const btnPase = document.querySelector(".btn.primary");
+  const modal = document.getElementById("modal-pase");
+  const btnOk = document.getElementById("modal-ok");
 
-  btn.addEventListener("click", () => {
-    modal.classList.add("is-active");
+  if(!btnPase || !modal) return;
+
+  btnPase.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
   });
 
-  const closeModal = () => {
-    modal.classList.remove("is-active");
+  btnOk.addEventListener("click", () => {
+    modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
-  };
+  });
 
-  ok?.addEventListener("click", closeModal);
-  backdrop?.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if(e.target === modal){
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+    }
+  });
+
 });
-// =============== FIN MODAL PRÓXIMAMENTE ===============
+// ================= FIN MODAL =================
+
 
