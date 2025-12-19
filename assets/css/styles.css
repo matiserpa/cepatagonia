@@ -136,6 +136,60 @@ a{ color:inherit; }
   .nav{ gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
   .nav a{ padding: 9px 10px; }
   .section{ padding: 40px 0; }
+
+  /* ===================================================== */
+/* INICIO PALETA VERDE + APPLE BLUR (RESTORE)            */
+/* Función: recuperar estética original                  */
+/* ===================================================== */
+
+:root{
+  --bg: #07110d;                 /* fondo oscuro verdoso */
+  --text: #eaf3ee;
+  --muted: rgba(234,243,238,.70);
+
+  --accent: #3bd17a;             /* verde principal */
+  --accent-2: #1ea85c;           /* verde secundario */
+
+  --glass: rgba(7, 17, 13, 0.55);
+  --glass-border: rgba(59,209,122,.22);
+}
+
+body{
+  background: radial-gradient(1200px 700px at 20% 10%, rgba(59,209,122,.10), transparent 55%),
+              radial-gradient(900px 600px at 80% 20%, rgba(30,168,92,.10), transparent 60%),
+              var(--bg);
+  color: var(--text);
+}
+
+/* Header Apple (glass + blur) */
+.site-header.apple-header{
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* Links del menú con tinte verde */
+.nav a{
+  color: var(--text);
+  opacity: .86;
+}
+.nav a:hover{
+  opacity: 1;
+  background: rgba(59,209,122,.10);
+  border: 1px solid rgba(59,209,122,.20);
+}
+
+/* Botones/CTAs si existen */
+.btn.primary{
+  border-color: rgba(59,209,122,.35);
+  background: rgba(59,209,122,.14);
+}
+
+/* ===================================================== */
+/* FIN PALETA VERDE + APPLE BLUR (RESTORE)               */
+/* ===================================================== */
+
 }
 /* ===================== */
 /* FIN RESPONSIVE */
