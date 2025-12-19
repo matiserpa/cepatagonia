@@ -1,81 +1,68 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Expositores – CEPATAGONIA</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Expositores – CEPATAGONIA</title>
 
+  <!-- ===================== INICIO FONTS ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ====================== FIN FONTS ====================== -->
 
-<link href="assets/css/styles.css" rel="stylesheet"/><link href="assets/css/pages/expositores.css" rel="stylesheet"/><script defer src="main.js"></script></head>
+  <!-- ===================== INICIO CSS GLOBAL ===================== -->
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS GLOBAL ====================== -->
+
+  <!-- ===================== INICIO CSS PÁGINA ===================== -->
+  <link href="assets/css/pages/expositores.css" rel="stylesheet"/>
+  <!-- ====================== FIN CSS PÁGINA ====================== -->
+
+  <!-- ===================== INICIO JS ===================== -->
+  <script defer src="main.js"></script>
+  <!-- ====================== FIN JS ====================== -->
+</head>
+
 <body>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- ===================== FIN HEADER (INCLUDE) ===================== -->
 
-<div id="header-placeholder"></div>
-<!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
-<!-- Función: carga header.html para no repetir código en cada página -->
-  <!-- ===================================================== -->
-<!-- INICIO HEADER GLOBAL -->
-<!-- Función: Header único (navbar) para todas las páginas -->
-<!-- Estilo: Apple blur + paleta verde desde CSS global    -->
-<!-- ===================================================== -->
-
-<header class="site-header apple-header">
-  <div class="header-container">
-
-    <!-- INICIO LOGO -->
-    <a href="index.html" class="logo" aria-label="Inicio">
-      <img src="LogoEsteticaB.png" alt="Cepa Patagonia Logo">
-    </a>
-    <!-- FIN LOGO -->
-
-    <!-- INICIO NAV -->
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="programa.html">Programa</a>
-      <a href="expositores.html">Expositores</a>
-      <a href="informacion.html">Información</a>
-      <a href="turismo.html">Turismo</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-    <!-- FIN NAV -->
-
-  </div>
-</header>
-
-<!-- ===================================================== -->
-<!-- FIN HEADER GLOBAL -->
-<!-- ===================================================== -->
+  <!-- ===================== INICIO HEADER (INCLUDE) ===================== -->
+  <!-- Función: carga header.html para no repetir código en cada página -->
+  <div id="header-placeholder"></div>
+  <!-- ====================== FIN HEADER (INCLUDE) ====================== -->
 
 
-<!-- ====================== FIN HEADER (INCLUDE) ====================== -->
-<!-- ================= HEADER ================= -->
+  <!-- ================= CONTENIDO EXPOSITORES ================= -->
+  <main class="page-wrapper">
+    <div class="panel">
 
-<!-- ============ FIN HEADER ============ -->
-<!-- ================= CONTENIDO EXPOSITORES ================= -->
-<main class="page-wrapper">
-<h1 class="section-title">Expositores</h1>
-<div class="expositor-grid">
-<div class="card">
-<img alt="Expositor 1" src="https://via.placeholder.com/300x200"/>
-<h3>Dra. Andrea Gómez</h3>
-<p>Especialista en biología cutánea y procesos celulares aplicados a la estética.</p>
-</div>
-<div class="card">
-<img alt="Expositor 2" src="https://via.placeholder.com/300x200"/>
-<h3>Dra. Marcela Ruiz</h3>
-<p>Experta en técnicas regenerativas. Workshop: Biorregeneración Facial.</p>
-</div>
-<!-- Podés seguir sumando más cards de expositores acá -->
-</div>
-</main>
-<!-- ============ FIN CONTENIDO EXPOSITORES ============ -->
-<!-- ===================== INICIO JS (INCLUDE HEADER) ===================== -->
-<!-- Función: inserta header.html dentro de #header-placeholder -->
+      <h1 class="section-title">Expositores</h1>
 
-<!-- ====================== FIN JS (INCLUDE HEADER) ====================== -->
+      <div class="expositor-grid">
+
+        <!-- ================= EXPOSITOR ================= -->
+        <div class="expositor-card">
+          <img alt="Expositor 1" src="https://via.placeholder.com/300x200"/>
+          <h3>Dra. Andrea Gómez</h3>
+          <p>Especialista en biología cutánea y procesos celulares aplicados a la estética.</p>
+        </div>
+        <!-- =============== FIN EXPOSITOR =============== -->
+
+        <!-- ================= EXPOSITOR ================= -->
+        <div class="expositor-card">
+          <img alt="Expositor 2" src="https://via.placeholder.com/300x200"/>
+          <h3>Dra. Marcela Ruiz</h3>
+          <p>Experta en técnicas regenerativas. Workshop: Biorregeneración Facial.</p>
+        </div>
+        <!-- =============== FIN EXPOSITOR =============== -->
+
+        <!-- Podés seguir sumando más expositores acá -->
+
+      </div>
+
+    </div>
+  </main>
+  <!-- ============ FIN CONTENIDO EXPOSITORES ============ -->
+
 </body>
 </html>
