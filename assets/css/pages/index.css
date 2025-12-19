@@ -10,7 +10,9 @@
 
 .hero{
   height: 92vh;
-  background: url("DJI_0215.jpg") top center / cover no-repeat;
+  background: url("../../../DJI_0215.jpg") top center / cover no-repeat;
+  ...
+}
   display: flex;
   align-items: center;
   justify-content: center;
