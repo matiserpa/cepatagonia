@@ -1,300 +1,213 @@
-/* ===================== */
-/* INICIO CSS PÁGINA: index.html */
-/* Función: estilos específicos de esta página */
-/* ===================== */
-
-/* (removido del CSS de página: :root ) */
+/* ===================================================== */
+/* INICIO CSS PÁGINA: index.html                          */
+/* Función: estilos específicos de la página de inicio   */
+/* ===================================================== */
 
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }/* (removido del CSS de página: body ) */
-/* (removido del CSS de página: /* =====================================================
-[LOGO – FONDO GLASS]
-===================================================== */
+/* ===================================================== */
+/* INICIO HERO                                           */
+/* ===================================================== */
 
-.logo ) */
-
-
-/* ================= FIN LOGO GLASS ================= */
-
-
-    /* ================= HERO ================= */
-    .hero {
-      height: 92vh;
-      background: url("DJI_0215.jpg") top center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      color: white;
-      padding-top: 110px;
-      overflow: hidden;
-    }
-
-    .hero-overlay {
-      background: rgba(0, 0, 0, 0.15);
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      text-align: center;
-      z-index: 10;
-    }
-
-    .hero-content h3 {
-      font-family: var(--fuente-titulos);
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-content h1 {
-      font-family: var(--fuente-titulos);
-      font-size: 3.6rem;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    .hero-content h4 {
-      font-size: 1.1rem;
-      font-weight: 300;
-    }
-
-    /* ================= INTRO ================= */
-    .intro-section {
-      background-color: var(--color-fondo);
-      padding: 55px 0 65px;
-      margin-top: -40px;
-      border-top-left-radius: 50px;
-      border-top-right-radius: 50px;
-      border-bottom-left-radius: 70px;
-      border-bottom-right-radius: 70px;
-    }
-
-    .intro-wrap {
-      max-width: 900px;
-      margin: auto;
-      background: linear-gradient(to bottom,
-          rgba(255, 255, 255, 0.92),
-          rgba(238, 238, 238, 0.92));
-      border-radius: 36px;
-      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
-      padding: 60px 30px 50px;
-      text-align: center;
-    }
-
-    .intro-wrap h2 {
-      font-family: var(--fuente-titulos);
-      font-size: 2.1rem;
-      color: var(--color-principal);
-    }
-
-    .intro-wrap p {
-      font-family: "Playfair Display", serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      color: #555;
-      margin: 18px 0;
-    }
-
-    .save {
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 25px;
-    }
-
-    .btn-box {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-      gap: 17px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 28px;
-      border-radius: 30px;
-      border: 2px solid var(--color-principal);
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.2s;
-    }
-
-    .btn.primary {
-      background-color: var(--color-principal);
-      color: white;
-    }
-
-    .btn.primary:hover {
-      background: #557a5e;
-    }
-
-    .btn.secondary {
-      background-color: white;
-      color: var(--color-principal);
-    }
-
-    .btn.secondary:hover {
-      background: var(--color-principal);
-      color: white;
-    }
-
-    /* =====================================================
-[VIDEO YOUTUBE – CONTENEDOR RESPONSIVE]
-===================================================== */
-.video-wrapper {
-  width: 100%;
-  max-width: 100%;
-  aspect-ratio: 16 / 9;
-  margin: 0 auto;
-}
-
-/* =====================================================
-[VIDEO YOUTUBE – IFRAME]
-===================================================== */
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: none;
-  border-radius: 25px;
-}
-/* ================= FIN VIDEO YOUTUBE ================= */
-
-
-    /* ================= VIDEO ================= */
-    .video-section {
-      max-width: 1100px;
-      margin: 55px auto;
-      padding: 20px;
-      border-radius: 35px;
-      background-color: var(--color-fondo);
-      text-align: center;
-    }
-
-    .video-title {
-      font-family: var(--fuente-titulos);
-      font-size: 1.55rem;
-      color: var(--verde-profundo);
-      background: rgba(255, 255, 255, 0.55);
-      padding: 12px 26px;
-      border-radius: 18px;
-      display: inline-block;
-      margin-bottom: 25px;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-    /* ================= PROPUESTA DE VALOR ================= */
-    .valor-section {
-      max-width: 900px;
-      margin: 40px auto 80px;
-      padding: 0 20px;
-      text-align: left;
-      font-size: 1.15rem;
-      line-height: 1.65;
-      color: var(--verde-profundo);
-      font-family: var(--fuente-texto);
-    }
-
-    .valor-section strong {
-      color: var(--color-principal);
-      font-weight: 700;
-    }
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
-body ) */
-/* (removido del CSS de página: /* Header más amigable en cel */
-@media (max-width: 768px) ) */
-
-/* ========= AJUSTES GENERALES MOBILE ========= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}/* (removido del CSS de página: /* Evitar scroll horizontal raro */
-body ) */
-/* (removido del CSS de página: /* Header más amigable en cel */
-@media (max-width: 768px) ) */
-/* (removido del CSS de página: /* =====================================================
-[VIMEO/VIDEO – TAMAÑO MÁS CHICO + RESPONSIVE]
-Archivo: CSS principal (o <style> en index.html)
-Ubicación: PEGAR AL FINAL
-Objetivo:
-- Que el video no sea tan alto en desktop (evitar scroll)
-- Mantener buena visual en mobile
-===================================================== */
-
-/* Contenedor base (si ya existe, este bloque lo ajusta sin romper) */
-.video-wrapper ) */
-
-
-/* Achicar SOLO este video (desktop) */
-.video-wrapper--small{
-  max-width: 820px;      /* ajustá 700–900 según tu gusto */
-  aspect-ratio: 21 / 9;  /* menos alto que 16:9 (más “banner”) */
-}
-
-/* Iframe siempre ocupa el contenedor */
-.video-wrapper iframe{
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: none;
-  border-radius: 25px;   /* mantiene tu estética */
-}
-
-/* Mobile: vuelve a 16:9 para que se vea mejor y más legible */
-@media (max-width: 768px){
-  .video-wrapper--small{
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-}/* (removido del CSS de página: /* ================= FIN [VIDEO RESPONSIVE] ================= */
-
-
-/* ===================== INICIO HEADER (BASE) ===================== */
-/* Función: header fijo con nav consistente en todas las páginas */
-#header ) */
-/* (removido del CSS de página: .header-inner ) */
-/* (removido del CSS de página: .logo-box img ) */
-
-
-nav ul{
-  list-style: none;
+.hero{
+  height: 92vh;
+  background: url("DJI_0215.jpg") top center / cover no-repeat;
   display: flex;
-  gap: 18px;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #ffffff;
+  padding-top: 110px;
+  overflow: hidden;
+}
+
+.hero-overlay{
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-content{
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.hero-content h3{
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-content h1{
+  font-family: var(--fuente-titulos);
+  font-size: 3.6rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hero-content h4{
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* ===================================================== */
+/* FIN HERO                                              */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO INTRO                                          */
+/* ===================================================== */
+
+.intro-section{
+  background-color: var(--color-fondo);
+  padding: 55px 0 65px;
+  margin-top: -40px;
+  border-radius: 50px 50px 70px 70px;
+}
+
+.intro-wrap{
+  max-width: 900px;
+  margin: auto;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.92),
+    rgba(238, 238, 238, 0.92)
+  );
+  border-radius: 36px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 60px 30px 50px;
+  text-align: center;
+}
+
+.intro-wrap h2{
+  font-family: var(--fuente-titulos);
+  font-size: 2.1rem;
+  color: var(--color-principal);
+}
+
+.intro-wrap p{
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #555;
+  margin: 18px 0;
+}
+
+.save{
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.btn-box{
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 17px;
   flex-wrap: wrap;
 }
 
-nav a{
-  text-decoration: none;
+/* ===================================================== */
+/* FIN INTRO                                             */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO BOTONES (solo ajustes de index)                */
+/* ===================================================== */
+
+.btn.primary:hover{
+  background: #557a5e;
+}
+
+/* ===================================================== */
+/* FIN BOTONES                                           */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO VIDEO HERO                                     */
+/* Función: video principal (YouTube / Vimeo / video)    */
+/* ===================================================== */
+
+.hero-video{
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 55px auto;
+  height: min(72vh, 620px);
+  overflow: hidden;
+  border-radius: 35px;
+  background: rgba(7, 17, 13, 0.55);
+  border: 1px solid rgba(59,209,122,.22);
+}
+
+.hero-video iframe,
+.hero-video video{
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  display: block;
+}
+
+.video-title{
+  font-family: var(--fuente-titulos);
+  font-size: 1.55rem;
+  color: var(--verde-profundo);
+  background: rgba(255, 255, 255, 0.55);
+  padding: 12px 26px;
+  border-radius: 18px;
+  display: inline-block;
+  margin-bottom: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--verde-profundo, #3B4F3E);
 }
 
-nav a:hover{
-  opacity: 0.8;
+/* Mobile */
+@media (max-width: 768px){
+  .hero-video{
+    height: 52vh;
+    margin: 35px auto;
+    border-radius: 22px;
+  }
 }
-/* ====================== FIN HEADER (BASE) ====================== */
 
-/* ===================== */
-/* FIN CSS PÁGINA: index.html */
-/* ===================== */
+/* ===================================================== */
+/* FIN VIDEO HERO                                        */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* INICIO PROPUESTA DE VALOR                             */
+/* ===================================================== */
+
+.valor-section{
+  max-width: 900px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  text-align: left;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--verde-profundo);
+  font-family: var(--fuente-texto);
+}
+
+.valor-section strong{
+  color: var(--color-principal);
+  font-weight: 700;
+}
+
+/* ===================================================== */
+/* FIN PROPUESTA DE VALOR                                */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* FIN CSS PÁGINA: index.html                            */
+/* ===================================================== */
