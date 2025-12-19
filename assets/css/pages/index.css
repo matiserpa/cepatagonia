@@ -3,22 +3,26 @@
 /* Función: estilos específicos de la página de inicio   */
 /* ===================================================== */
 
-
 /* ===================================================== */
 /* INICIO HERO                                           */
 /* ===================================================== */
 
 .hero{
   height: 92vh;
-  background: url("../../../DJI_0215.jpg") top center / cover no-repeat;
-  ...
-}
+  /* ✅ Ruta recomendada: si DJI_0215.jpg está en la raíz junto a index.html */
+  background: url("../../DJI_0215.jpg") top center / cover no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   position: relative;
   color: #ffffff;
+
+  /* Si usás header FIXED en styles.css, este padding ayuda.
+     Si usás sticky, igual no molesta. */
   padding-top: 110px;
+
   overflow: hidden;
 }
 
@@ -33,24 +37,6 @@
   position: relative;
   text-align: center;
   z-index: 10;
-}
-
-.hero-content h3{
-  font-family: var(--fuente-titulos);
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.hero-content h1{
-  font-family: var(--fuente-titulos);
-  font-size: 3.6rem;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-}
-
-.hero-content h4{
-  font-size: 1.1rem;
-  font-weight: 300;
 }
 
 /* ===================================================== */
@@ -77,21 +63,25 @@
   border: 1px solid rgba(255,255,255,0.35);
   padding: 8px 14px;
   border-radius: 999px;
+  font-family: var(--fuente-titulos);
   font-size: 0.95rem;
   letter-spacing: 2px;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
 }
 
 .hero-content h1{
+  font-family: var(--fuente-titulos);
   font-size: clamp(2.4rem, 5vw, 3.6rem);
   letter-spacing: 3px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .hero-content h4{
+  font-family: var(--fuente-texto);
   font-size: 1.05rem;
   font-weight: 500;
   opacity: 0.95;
+  margin: 0;
 }
 
 /* Mobile */
@@ -103,7 +93,6 @@
 /* ===================================================== */
 /* FIN AJUSTES HERO TEXTO                                */
 /* ===================================================== */
-
 
 
 /* ===================================================== */
@@ -172,7 +161,7 @@
 /* ===================================================== */
 
 .btn.primary:hover{
-  background: #4e6f54; /* consistente con styles.css */
+  background: #4e6f54;
 }
 
 /* ===================================================== */
@@ -181,15 +170,33 @@
 
 
 /* ===================================================== */
+/* INICIO TÍTULO VIDEO                                   */
+/* ===================================================== */
+
+.video-heading{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: var(--fuente-titulos);
+  font-size: 2rem;
+  color: var(--verde-principal);
+  margin: 60px auto 18px;
+  letter-spacing: 1px;
+}
+
+/* ===================================================== */
+/* FIN TÍTULO VIDEO                                      */
+/* ===================================================== */
+
+
+/* ===================================================== */
 /* INICIO VIDEO HERO                                     */
-/* Función: video principal (Vimeo / YouTube)            */
-/* Estilo: paleta vieja (claro + borde suave)            */
 /* ===================================================== */
 
 .hero-video{
   position: relative;
   width: min(100% - 32px, 1100px);
-  margin: 55px auto;
+  margin: 0 auto 55px;
 
   height: min(72vh, 620px);
   overflow: hidden;
@@ -197,7 +204,7 @@
   border-radius: 35px;
 
   background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(95, 127, 99, 0.35); /* verde suave */
+  border: 1px solid rgba(95, 127, 99, 0.35);
   box-shadow: 0px 12px 28px rgba(0,0,0,0.12);
 }
 
@@ -211,9 +218,14 @@
 
 /* Mobile */
 @media (max-width: 768px){
+  .video-heading{
+    font-size: 1.6rem;
+    margin: 45px auto 16px;
+  }
+
   .hero-video{
     height: 52vh;
-    margin: 35px auto;
+    margin-bottom: 35px;
     border-radius: 22px;
   }
 }
@@ -245,13 +257,13 @@
   font-weight: 700;
 }
 
-
 /* ===================================================== */
 /* FIN PROPUESTA DE VALOR                                */
 /* ===================================================== */
 
+
 /* ===================================================== */
-/* INICIO FAQ                                             */
+/* INICIO FAQ                                            */
 /* ===================================================== */
 
 .faq-section{
@@ -310,36 +322,6 @@
 /* ===================================================== */
 /* FIN FAQ                                               */
 /* ===================================================== */
-
-/* ===================================================== */
-/* INICIO TÍTULO VIDEO                                  */
-/* ===================================================== */
-
-.video-heading{
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-family: var(--fuente-titulos);
-  font-size: 2rem;
-  color: var(--verde-principal);
-  margin: 60px auto 22px;
-  letter-spacing: 1px;
-}
-
-/* Mobile */
-@media (max-width: 768px){
-  .video-heading{
-    font-size: 1.6rem;
-    margin: 45px auto 18px;
-  }
-}
-
-/* ===================================================== */
-/* FIN TÍTULO VIDEO                                     */
-/* ===================================================== */
-
-
-
 
 /* ===================================================== */
 /* FIN CSS PÁGINA: index.html                            */
