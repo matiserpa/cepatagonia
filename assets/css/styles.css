@@ -237,12 +237,9 @@ a{
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 2000;
+  z-index: 3000;
 }
-
-.modal.show{
-  display: flex;
-}
+.modal.show{ display: flex; }
 
 .modal-content{
   background: #fff;
@@ -250,21 +247,18 @@ a{
   border-radius: 30px;
   text-align: center;
   max-width: 420px;
-  width: 90%;
+  width: calc(100% - 32px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
 }
 
 .modal-logo{
   max-width: 160px;
+  height: auto;
+  display: block;
   margin: 0 auto 20px;
 }
+/* =============== FIN MODAL =============== */
 
-.modal-content h2{
-  font-family: var(--fuente-titulos);
-  color: var(--verde-principal);
-  margin-bottom: 12px;
-}
-
-/* ================= FIN MODAL ================= */
 
 
 /* ===================================================== */
