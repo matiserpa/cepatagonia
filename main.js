@@ -32,34 +32,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 // =================== FIN HEADER INCLUDE ====================
 
-// ================= MODAL ADQUIRÍ TU PASE =================
+// ===== MODAL ADQUIRÍ TU PASE =====
 document.addEventListener("DOMContentLoaded", () => {
-
-  const btnPase = document.querySelector(".btn.primary");
+  const btn = document.querySelector(".btn.primary");
   const modal = document.getElementById("modal-pase");
-  const btnOk = document.getElementById("modal-ok");
+  const cerrar = document.getElementById("cerrar-modal");
 
-  if(!btnPase || !modal) return;
+  if (!btn || !modal || !cerrar) return;
 
-  btnPase.addEventListener("click", (e) => {
+  btn.addEventListener("click", (e) => {
     e.preventDefault();
-    modal.classList.add("active");
-    modal.setAttribute("aria-hidden", "false");
+    modal.classList.add("show");
   });
 
-  btnOk.addEventListener("click", () => {
-    modal.classList.remove("active");
-    modal.setAttribute("aria-hidden", "true");
+  cerrar.addEventListener("click", () => {
+    modal.classList.remove("show");
   });
-
-  modal.addEventListener("click", (e) => {
-    if(e.target === modal){
-      modal.classList.remove("active");
-      modal.setAttribute("aria-hidden", "true");
-    }
-  });
-
 });
-// ================= FIN MODAL =================
-
+// ===== FIN MODAL ADQUIRÍ TU PASE =====
 
