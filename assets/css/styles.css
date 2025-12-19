@@ -1,52 +1,40 @@
 /* ===================================================== */
 /* BASE GLOBAL – CEPATAGONIA                             */
-/* Función: paleta, layout, header único, botones        */
-/* Versión: estable para presentación                    */
+/* Paleta original: beige + verde salvia                 */
+/* Versión estable para presentación                    */
 /* ===================================================== */
 
 
 /* ===================================================== */
-/* VARIABLES GLOBALES (COMPAT + LOOK ORIGINAL)            */
+/* VARIABLES GLOBALES                                    */
 /* ===================================================== */
 :root{
-  /* Colores originales */
-  --color-fondo: #f2efe6;          /* beige base */
-  --verde-profundo: #2f4a36;       /* verde textos */
-  --color-principal: #3bd17a;      /* verde acento */
+  /* Colores base (como la versión vieja) */
+  --color-fondo: #f6f3ea;        /* beige claro */
+  --verde-header: #6f8f73;       /* verde salvia header */
+  --verde-principal: #5f7f63;    /* verde títulos/botones */
+  --verde-suave: #8fae94;
 
-  /* Texto */
-  --text: #1a1a1a;
-  --muted: rgba(0,0,0,.65);
+  --texto-principal: #2e2e2e;
+  --texto-secundario: #555555;
 
   /* Tipografías */
   --fuente-titulos: "Cinzel", serif;
-  --fuente-texto: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-
-  /* Header glass */
-  --glass: rgba(7, 17, 13, 0.60);
-  --glass-border: rgba(59,209,122,.22);
-
-  /* UI */
-  --border: rgba(47,74,54,.20);
-  --radius: 18px;
-  --shadow: 0 10px 30px rgba(0,0,0,.15);
+  --fuente-texto: "Playfair Display", serif;
 
   /* Layout */
   --container: 1200px;
-
-  /* Spacing */
-  --s1: 8px;
-  --s2: 12px;
-  --s3: 16px;
-  --s4: 24px;
-  --s5: 32px;
+  --radius: 22px;
+  --shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
 
 /* ===================================================== */
 /* RESET + BASE                                          */
 /* ===================================================== */
-*{ box-sizing: border-box; }
+*{
+  box-sizing: border-box;
+}
 
 html, body{
   height: 100%;
@@ -54,10 +42,10 @@ html, body{
 
 body{
   margin: 0;
-  background: var(--color-fondo);   /* ✅ beige restaurado */
-  color: var(--text);
+  background: var(--color-fondo);
+  color: var(--texto-principal);
   font-family: var(--fuente-texto);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 img{
@@ -77,77 +65,64 @@ a{
 /* ===================================================== */
 .container{
   width: min(100% - 32px, var(--container));
-  margin-inline: auto;
+  margin: 0 auto;
 }
 
 .section{
-  padding: 56px 0;
+  padding: 60px 0;
 }
 
 .card{
   background: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 40px;
   box-shadow: var(--shadow);
-  padding: var(--s4);
+  padding: 50px 40px;
 }
 
 
 /* ===================================================== */
-/* HEADER APPLE (ÚNICO)                                  */
+/* HEADER (ESTILO ORIGINAL)                              */
 /* ===================================================== */
-.site-header.apple-header{
+.site-header{
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  background: var(--glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-
-  border-bottom: 1px solid var(--glass-border);
+  background: var(--verde-header);
 }
 
 .header-container{
   width: min(100% - 32px, var(--container));
-  margin-inline: auto;
-  padding: 14px 0;
+  margin: 0 auto;
+  padding: 22px 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--s4);
-}
-
-.logo{
-  display: inline-flex;
-  align-items: center;
 }
 
 .logo img{
-  height: 38px;
+  height: 42px;
   width: auto;
-  filter: brightness(0) invert(1); /* logo blanco sobre glass */
 }
 
+/* NAV */
 .nav{
   display: flex;
-  align-items: center;
-  gap: 22px;
+  gap: 28px;
 }
 
 .nav a{
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  color: #eaf3ee;
-  transition: background .2s ease, transform .2s ease, opacity .2s ease;
+  font-family: var(--fuente-titulos);
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.9;
+  transition: opacity .2s ease;
 }
 
 .nav a:hover{
-  background: rgba(59,209,122,.12);
-  transform: translateY(-1px);
+  opacity: 1;
 }
 
 
@@ -155,35 +130,34 @@ a{
 /* BOTONES                                               */
 /* ===================================================== */
 .btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  padding: 12px 26px;
-  border-radius: 30px;
-  border: 2px solid var(--color-principal);
-
-  font-weight: 600;
-  font-size: 0.95rem;
+  padding: 14px 34px;
+  border-radius: 40px;
+  font-family: var(--fuente-titulos);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   cursor: pointer;
-
-  background: transparent;
-  color: var(--color-principal);
-  transition: background .2s ease, color .2s ease, transform .2s ease;
+  transition: all .25s ease;
 }
 
 .btn.primary{
-  background: var(--color-principal);
+  background: var(--verde-principal);
   color: #ffffff;
+  border: none;
 }
 
 .btn.primary:hover{
-  background: #2fa968;
+  background: #4e6f54;
+}
+
+.btn.secondary{
+  background: transparent;
+  color: var(--verde-principal);
+  border: 2px solid var(--verde-principal);
 }
 
 .btn.secondary:hover{
-  background: var(--color-principal);
+  background: var(--verde-principal);
   color: #ffffff;
 }
 
@@ -194,18 +168,26 @@ a{
 @media (max-width: 768px){
 
   .header-container{
-    padding: 12px 0;
-    gap: var(--s3);
+    flex-direction: column;
+    gap: 18px;
   }
 
   .nav{
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: flex-end;
+    justify-content: center;
+    gap: 14px;
   }
 
   .section{
     padding: 40px 0;
   }
 
+  .card{
+    padding: 35px 25px;
+    border-radius: 28px;
+  }
 }
+
+/* ===================================================== */
+/* FIN BASE GLOBAL                                      */
+/* ===================================================== */
