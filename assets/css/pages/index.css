@@ -4,14 +4,13 @@
 /* ===================================================== */
 
 /* ===================================================== */
-/* INICIO HERO                                           */
+/* HERO                                                   */
 /* ===================================================== */
-
 .hero{
   height: 92vh;
 
-  /* ✅ CORRECTO para tu estructura actual */
-  background: url("../../../DJI_0215.jpg") top center / cover no-repeat;
+  /* ✅ RUTA ROBUSTA para GitHub Pages (repo: /cepatagonia/) */
+  background: url("/cepatagonia/DJI_0215.jpg") top center / cover no-repeat;
 
   display: flex;
   align-items: center;
@@ -23,9 +22,8 @@
   overflow: hidden;
 }
 
-
 .hero-overlay{
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.18);
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -35,21 +33,11 @@
   position: relative;
   text-align: center;
   z-index: 10;
-}
 
-/* ===================================================== */
-/* FIN HERO                                              */
-/* ===================================================== */
-
-/* ===================================================== */
-/* INICIO AJUSTES HERO TEXTO (más claro + pro)           */
-/* ===================================================== */
-
-.hero-content{
   background: rgba(255,255,255,0.22);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  padding: 18px 22px;
+  padding: 22px 26px;
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.35);
   text-shadow: 0 10px 25px rgba(0,0,0,0.35);
@@ -64,39 +52,35 @@
   font-family: var(--fuente-titulos);
   font-size: 0.95rem;
   letter-spacing: 2px;
-  margin: 0 0 12px;
+  margin: 0 0 14px;
 }
 
 .hero-content h1{
   font-family: var(--fuente-titulos);
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(2.6rem, 5.4vw, 4.2rem);
   letter-spacing: 3px;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
+/* ✅ ACÁ: “Congreso de Estética…” más grande y llamativo */
 .hero-content h4{
   font-family: var(--fuente-texto);
-  font-size: 1.05rem;
-  font-weight: 500;
-  opacity: 0.95;
+  font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  opacity: 0.98;
   margin: 0;
 }
 
 /* Mobile */
 @media (max-width: 768px){
   .hero{ padding-top: 130px; }
-  .hero-content{ padding: 14px 16px; border-radius: 18px; }
+  .hero-content{ padding: 16px 16px; border-radius: 18px; }
 }
 
 /* ===================================================== */
-/* FIN AJUSTES HERO TEXTO                                */
+/* INTRO                                                  */
 /* ===================================================== */
-
-
-/* ===================================================== */
-/* INICIO INTRO                                          */
-/* ===================================================== */
-
 .intro-section{
   background-color: var(--color-fondo);
   padding: 55px 0 65px;
@@ -150,27 +134,15 @@
 }
 
 /* ===================================================== */
-/* FIN INTRO                                             */
+/* BOTONES                                                */
 /* ===================================================== */
-
-
-/* ===================================================== */
-/* INICIO BOTONES (ajuste leve en index)                 */
-/* ===================================================== */
-
 .btn.primary:hover{
   background: #4e6f54;
 }
 
 /* ===================================================== */
-/* FIN BOTONES                                           */
+/* TÍTULO VIDEO                                            */
 /* ===================================================== */
-
-
-/* ===================================================== */
-/* INICIO TÍTULO VIDEO                                   */
-/* ===================================================== */
-
 .video-heading{
   display: block;
   width: 100%;
@@ -183,14 +155,8 @@
 }
 
 /* ===================================================== */
-/* FIN TÍTULO VIDEO                                      */
+/* VIDEO HERO                                              */
 /* ===================================================== */
-
-
-/* ===================================================== */
-/* INICIO VIDEO HERO                                     */
-/* ===================================================== */
-
 .hero-video{
   position: relative;
   width: min(100% - 32px, 1100px);
@@ -229,14 +195,8 @@
 }
 
 /* ===================================================== */
-/* FIN VIDEO HERO                                        */
+/* PROPUESTA DE VALOR                                      */
 /* ===================================================== */
-
-
-/* ===================================================== */
-/* INICIO PROPUESTA DE VALOR                             */
-/* ===================================================== */
-
 .valor-section{
   max-width: 900px;
   margin: 40px auto 80px;
@@ -256,14 +216,8 @@
 }
 
 /* ===================================================== */
-/* FIN PROPUESTA DE VALOR                                */
+/* FAQ                                                     */
 /* ===================================================== */
-
-
-/* ===================================================== */
-/* INICIO FAQ                                            */
-/* ===================================================== */
-
 .faq-section{
   padding: 20px 0 80px;
 }
@@ -316,11 +270,3 @@
   }
   .faq-title{ font-size: 1.7rem; }
 }
-
-/* ===================================================== */
-/* FIN FAQ                                               */
-/* ===================================================== */
-
-/* ===================================================== */
-/* FIN CSS PÁGINA: index.html                            */
-/* ===================================================== */
