@@ -8,10 +8,10 @@
 /* VARIABLES GLOBALES                                    */
 /* ===================================================== */
 :root{
-  /* Colores base (como la versión vieja) */
-  --color-fondo: #f6f3ea;        /* beige claro */
-  --verde-header: #6f8f73;       /* verde salvia header */
-  --verde-principal: #5f7f63;    /* verde títulos/botones */
+  /* Colores base */
+  --color-fondo: #f6f3ea;
+  --verde-header: #6f8f73;
+  --verde-principal: #5f7f63;
   --verde-suave: #8fae94;
 
   --texto-principal: #2e2e2e;
@@ -25,10 +25,6 @@
   --container: 1200px;
   --radius: 22px;
   --shadow: 0 8px 24px rgba(0,0,0,.12);
-
-  /* Header height aproximado (para compensar fixed) */
-  --header-offset-desktop: 92px;
-  --header-offset-mobile: 132px;
 }
 
 /* ===================================================== */
@@ -44,9 +40,6 @@ body{
   color: var(--texto-principal);
   font-family: var(--fuente-texto);
   line-height: 1.6;
-
-  /* ✅ Compensa el header FIXED para que no tape el contenido */
-  padding-top: var(--header-offset-desktop);
 }
 
 img{
@@ -80,39 +73,41 @@ a{
 }
 
 /* ===================================================== */
-/* HEADER – FIXED (siempre visible al scrollear)          */
-/* Nota: sticky puede fallar por overflow/transform en CSS */
+/* HEADER – FIJO SIEMPRE VISIBLE                         */
 /* ===================================================== */
 .site-header{
-  position: fixed;      /* ✅ no falla nunca */
+  position: fixed;        /* ✅ fijo real (no sticky) */
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;        /* por encima de todo */
+  z-index: 5000;
   background: var(--verde-header);
 }
 
+/* Contenedor del header */
 .header-container{
   width: min(100% - 32px, var(--container));
   margin: 0 auto;
 
-  /* Ajuste para que el logo sea grande sin agrandar banda */
+  /* Altura cómoda + sin agrandar banda exagerado */
   padding: 14px 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 22px;
 }
 
 /* LOGO */
 .logo{
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 
+/* ✅ LOGO GRANDE (DESKTOP) */
 .logo img{
-  height: 58px;   /* tamaño final aprobado */
+  height: 74px;     /* <-- subido fuerte */
   width: auto;
 }
 
@@ -122,6 +117,7 @@ a{
   gap: 28px;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav a{
@@ -136,6 +132,13 @@ a{
 
 .nav a:hover{
   opacity: 1;
+}
+
+/* ===================================================== */
+/* IMPORTANTE: Como el header es fixed, hay que empujar el contenido */
+/* ===================================================== */
+body{
+  padding-top: 108px; /* ✅ compensa header en desktop */
 }
 
 /* ===================================================== */
@@ -174,40 +177,6 @@ a{
 }
 
 /* ===================================================== */
-/* RESPONSIVE                                            */
-/* ===================================================== */
-@media (max-width: 768px){
-
-  body{
-    padding-top: var(--header-offset-mobile);
-  }
-
-  .header-container{
-    flex-direction: column;
-    gap: 14px;
-    padding: 12px 0;
-  }
-
-  .logo img{
-    height: 52px;
-  }
-
-  .nav{
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .section{
-    padding: 40px 0;
-  }
-
-  .card{
-    padding: 35px 25px;
-    border-radius: 28px;
-  }
-}
-
-/* ===================================================== */
 /* MODAL – ADQUIRÍ TU PASE                               */
 /* ===================================================== */
 .modal{
@@ -217,10 +186,9 @@ a{
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 3000;
+  z-index: 9000;
   padding: 18px;
 }
-
 .modal.show{ display: flex; }
 
 .modal-content{
@@ -234,12 +202,72 @@ a{
 }
 
 .modal-logo{
-  max-width: 160px;
+  max-width: 180px;
   height: auto;
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 18px;
 }
 
 /* ===================================================== */
-/* FIN BASE GLOBAL                                      */
+/* RESPONSIVE                                            */
+/* ===================================================== */
+@media (max-width: 900px){
+  .header-container{
+    gap: 16px;
+  }
+
+  .nav{
+    gap: 18px;
+  }
+
+  /* logo grande también en tablets */
+  .logo img{
+    height: 68px;
+  }
+
+  body{
+    padding-top: 102px;
+  }
+}
+
+@media (max-width: 768px){
+  .header-container{
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 0;
+    gap: 10px;
+  }
+
+  /* ✅ LOGO GRANDE (MOBILE) */
+  .logo img{
+    height: 72px; /* grande y visible */
+  }
+
+  .nav{
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav a{
+    font-size: 0.85rem;
+    letter-spacing: 1.6px;
+  }
+
+  /* Como el header ahora ocupa más alto en mobile */
+  body{
+    padding-top: 148px;
+  }
+
+  .section{
+    padding: 40px 0;
+  }
+
+  .card{
+    padding: 35px 25px;
+    border-radius: 28px;
+  }
+}
+
+/* ===================================================== */
+/* FIN BASE GLOBAL                                       */
 /* ===================================================== */
