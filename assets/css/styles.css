@@ -40,6 +40,9 @@ body{
   color: var(--texto-principal);
   font-family: var(--fuente-texto);
   line-height: 1.6;
+
+  /* ✅ IMPORTANTE: como el header es FIXED, empujamos el contenido */
+  padding-top: 110px; /* desktop */
 }
 
 img{
@@ -76,7 +79,7 @@ a{
 /* HEADER – FIJO SIEMPRE VISIBLE                         */
 /* ===================================================== */
 .site-header{
-  position: fixed;        /* ✅ fijo real (no sticky) */
+  position: fixed;        /* ✅ fijo real */
   top: 0;
   left: 0;
   right: 0;
@@ -89,8 +92,8 @@ a{
   width: min(100% - 32px, var(--container));
   margin: 0 auto;
 
-  /* Altura cómoda + sin agrandar banda exagerado */
-  padding: 14px 0;
+  /* ✅ franja controlada: NO gigante */
+  padding: 10px 0;
 
   display: flex;
   align-items: center;
@@ -98,20 +101,24 @@ a{
   gap: 22px;
 }
 
-/* LOGO */
+/* ===================================================== */
+/* LOGO (GRANDE)                                         */
+/* ===================================================== */
 .logo{
   display: flex;
   align-items: center;
   flex: 0 0 auto;
 }
 
-/* ✅ LOGO GRANDE (DESKTOP) */
+/* ✅ LOGO GRANDE DESKTOP */
 .logo img{
-  height: 74px;     /* <-- subido fuerte */
+  height: 84px;     /* ⬅ más grande y visible */
   width: auto;
 }
 
-/* NAV */
+/* ===================================================== */
+/* NAV                                                   */
+/* ===================================================== */
 .nav{
   display: flex;
   gap: 28px;
@@ -132,13 +139,6 @@ a{
 
 .nav a:hover{
   opacity: 1;
-}
-
-/* ===================================================== */
-/* IMPORTANTE: Como el header es fixed, hay que empujar el contenido */
-/* ===================================================== */
-body{
-  padding-top: 108px; /* ✅ compensa header en desktop */
 }
 
 /* ===================================================== */
@@ -222,11 +222,11 @@ body{
 
   /* logo grande también en tablets */
   .logo img{
-    height: 68px;
+    height: 78px;
   }
 
   body{
-    padding-top: 102px;
+    padding-top: 112px;
   }
 }
 
@@ -234,13 +234,13 @@ body{
   .header-container{
     flex-direction: column;
     justify-content: center;
-    padding: 12px 0;
+    padding: 10px 0;
     gap: 10px;
   }
 
-  /* ✅ LOGO GRANDE (MOBILE) */
+  /* ✅ LOGO GRANDE MOBILE */
   .logo img{
-    height: 72px; /* grande y visible */
+    height: 84px; /* ⬅ grande en celu */
   }
 
   .nav{
@@ -253,9 +253,9 @@ body{
     letter-spacing: 1.6px;
   }
 
-  /* Como el header ahora ocupa más alto en mobile */
+  /* ✅ El header en mobile es más alto: empujamos contenido */
   body{
-    padding-top: 148px;
+    padding-top: 170px;
   }
 
   .section{
