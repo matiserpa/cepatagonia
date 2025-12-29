@@ -32,122 +32,203 @@
 
   <!-- ================= CONTENIDO CONTACTO ================= -->
   <main class="page-wrapper">
-    <h1 class="section-title">Contacto</h1>
+    <div class="card contact-card">
+      <h1 class="section-title">Contacto</h1>
 
-    <p class="section-subtitle">
-      Completá tus datos y contanos en qué podemos ayudarte. Nos pondremos en contacto a la brevedad.
-    </p>
+      <p class="section-subtitle">
+        Completá tus datos y contanos en qué podemos ayudarte. Nos pondremos en contacto a la brevedad.
+      </p>
 
-    <div class="contact-grid">
+      <div class="contact-grid">
 
-      <div class="contact-info">
-        <p><strong>Email:</strong> infocepatagonia@gmail.com</p>
-        <p><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
-        <p><strong>Ubicación:</strong> San Martín de los Andes · Patagonia Argentina</p>
-        <p><strong>Horarios de respuesta:</strong> Lunes a viernes de 10 a 18 h</p>
+        <div class="contact-info">
+          <p><strong>Email:</strong> infocepatagonia@gmail.com</p>
+          <p><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
+          <p><strong>Ubicación:</strong> San Martín de los Andes · Patagonia Argentina</p>
+          <p><strong>Horarios de respuesta:</strong> Lunes a viernes de 10 a 18 h</p>
+        </div>
+
+        <!-- IFRAME oculto para enviar sin navegar -->
+        <iframe
+          name="fs_iframe"
+          id="fs_iframe"
+          title="FormSubmit hidden iframe"
+          style="display:none; width:0; height:0; border:0;"
+        ></iframe>
+
+        <!-- ===================================================== -->
+        <!-- FORM: ENVÍA POR EMAIL con FormSubmit (SIN BACKEND)     -->
+        <!-- Envia a: infocepatagonia@gmail.com                     -->
+        <!-- ===================================================== -->
+        <form
+          id="contact-form"
+          class="contact-form"
+          action="https://formsubmit.co/infocepatagonia@gmail.com"
+          method="POST"
+          target="fs_iframe"
+        >
+          <!-- Config FormSubmit -->
+          <input type="hidden" name="_subject" value="Nuevo contacto desde CEPATAGONIA">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Honeypot anti-spam (FormSubmit lo soporta) -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="_honey">No completar</label>
+            <input type="text" name="_honey" id="_honey" tabindex="-1" autocomplete="off">
+          </div>
+
+          <label for="nombre">Nombre</label>
+          <input
+            class="only-letters"
+            id="nombre"
+            name="nombre"
+            required
+            title="Solo se permiten letras y espacios."
+            type="text"
+          />
+
+          <label for="apellido">Apellido</label>
+          <input
+            class="only-letters"
+            id="apellido"
+            name="apellido"
+            required
+            title="Solo se permiten letras y espacios."
+            type="text"
+          />
+
+          <!-- ✅ NUEVO CAMPO: MAIL -->
+          <label for="email">Mail</label>
+          <input
+            id="email"
+            name="email"
+            required
+            type="email"
+            placeholder="tuemail@ejemplo.com"
+          />
+
+          <label for="ciudad">Ciudad</label>
+          <input
+            class="only-letters"
+            id="ciudad"
+            name="ciudad"
+            title="Solo se permiten letras y espacios."
+            type="text"
+          />
+
+          <label for="pais">País</label>
+          <input
+            class="only-letters"
+            id="pais"
+            name="pais"
+            title="Solo se permiten letras y espacios."
+            type="text"
+          />
+
+          <label for="telefono">Teléfono (solo números)</label>
+          <input
+            id="telefono"
+            name="telefono"
+            maxlength="20"
+            pattern="[0-9+ ]+"
+            title="Solo se permiten números, espacios y el signo +."
+            type="tel"
+          />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            maxlength="500"
+            placeholder="Contanos en qué podemos ayudarte"
+            required
+          ></textarea>
+
+          <button id="btn-enviar" class="btn primary" type="submit">Enviar mensaje</button>
+
+          <!-- Feedback inline -->
+          <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+        </form>
+
       </div>
-
-      <!-- ===================================================== -->
-      <!-- FORM: ENVÍA POR EMAIL con FormSubmit (SIN BACKEND)     -->
-      <!-- Envia a: infocepatagonia@gmail.com                     -->
-      <!-- ===================================================== -->
-      <form
-        class="contact-form"
-        action="https://formsubmit.co/infocepatagonia@gmail.com"
-        method="POST"
-      >
-        <!-- Opcionales recomendados -->
-        <input type="hidden" name="_subject" value="Nuevo contacto desde CEPATAGONIA">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <!-- Si querés redirigir a una página de gracias (opcional):
-        <input type="hidden" name="_next" value="https://TU-USUARIO.github.io/TU-REPO/gracias.html">
-        -->
-
-        <label for="nombre">Nombre</label>
-        <input
-          class="only-letters"
-          id="nombre"
-          name="nombre"
-          required
-          title="Solo se permiten letras y espacios."
-          type="text"
-        />
-
-        <label for="apellido">Apellido</label>
-        <input
-          class="only-letters"
-          id="apellido"
-          name="apellido"
-          required
-          title="Solo se permiten letras y espacios."
-          type="text"
-        />
-
-        <!-- ✅ NUEVO CAMPO: MAIL -->
-        <label for="email">Mail</label>
-        <input
-          id="email"
-          name="email"
-          required
-          type="email"
-          placeholder="tuemail@ejemplo.com"
-        />
-
-        <label for="ciudad">Ciudad</label>
-        <input
-          class="only-letters"
-          id="ciudad"
-          name="ciudad"
-          title="Solo se permiten letras y espacios."
-          type="text"
-        />
-
-        <label for="pais">País</label>
-        <input
-          class="only-letters"
-          id="pais"
-          name="pais"
-          title="Solo se permiten letras y espacios."
-          type="text"
-        />
-
-        <label for="telefono">Teléfono (solo números)</label>
-        <input
-          id="telefono"
-          name="telefono"
-          maxlength="20"
-          pattern="[0-9+ ]+"
-          title="Solo se permiten números, espacios y el signo +."
-          type="tel"
-        />
-
-        <label for="mensaje">Mensaje</label>
-        <textarea
-          id="mensaje"
-          name="mensaje"
-          maxlength="500"
-          placeholder="Contanos en qué podemos ayudarte"
-          required
-        ></textarea>
-
-        <button type="submit">Enviar mensaje</button>
-      </form>
-
     </div>
   </main>
   <!-- ============ FIN CONTENIDO CONTACTO ============ -->
 
   <!-- ================= SCRIPTS ================= -->
   <script>
-    // Bloquear números y símbolos en campos solo-letras
     document.addEventListener('DOMContentLoaded', () => {
+
+      // Solo letras en campos marcados
       const onlyLetterInputs = document.querySelectorAll('.only-letters');
       onlyLetterInputs.forEach(input => {
         input.addEventListener('input', () => {
           input.value = input.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, '');
         });
       });
+
+      // Envío sin navegar + feedback
+      const form = document.getElementById('contact-form');
+      const btn = document.getElementById('btn-enviar');
+      const feedback = document.getElementById('form-feedback');
+      const iframe = document.getElementById('fs_iframe');
+
+      if (!form || !btn || !feedback || !iframe) return;
+
+      const setLoading = (isLoading) => {
+        if (isLoading) {
+          btn.classList.add('is-loading');
+          btn.disabled = true;
+          btn.textContent = 'Enviando...';
+        } else {
+          btn.classList.remove('is-loading');
+          btn.disabled = false;
+          btn.textContent = 'Enviar mensaje';
+        }
+      };
+
+      const showMsg = (type, msg) => {
+        feedback.classList.remove('success', 'error', 'show');
+        feedback.classList.add(type);
+        feedback.textContent = msg;
+        feedback.classList.add('show');
+      };
+
+      // Si el iframe carga, asumimos que el POST terminó.
+      // (No podemos leer respuesta por cross-origin, pero alcanza para UX)
+      iframe.addEventListener('load', () => {
+        // Si estaba enviando, lo damos por OK
+        if (btn.disabled) {
+          setLoading(false);
+          showMsg('success', '¡Listo! Recibimos tu mensaje. Te vamos a responder a la brevedad.');
+          form.reset();
+        }
+      });
+
+      form.addEventListener('submit', () => {
+        // Honeypot: si lo completan, no mostramos nada.
+        const honey = form.querySelector('input[name="_honey"]');
+        if (honey && honey.value.trim() !== '') {
+          // silencioso anti-spam
+          return;
+        }
+
+        // UX: loading + mensaje “en proceso”
+        setLoading(true);
+        showMsg('success', 'Enviando tu mensaje…');
+
+        // Fallback: si por algún motivo no dispara el load del iframe
+        // (algunos browsers/cache), mostramos confirmación igual.
+        window.setTimeout(() => {
+          if (btn.disabled) {
+            setLoading(false);
+            showMsg('success', '¡Listo! Recibimos tu mensaje. Te vamos a responder a la brevedad.');
+            form.reset();
+          }
+        }, 1800);
+      });
+
     });
   </script>
 
