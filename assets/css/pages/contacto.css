@@ -3,7 +3,6 @@
 /* Función: layout + formulario + grilla                 */
 /* ===================================================== */
 
-
 /* ===================================================== */
 /* INICIO LAYOUT                                         */
 /* ===================================================== */
@@ -105,7 +104,7 @@
   font-family: var(--fuente-texto);
   color: var(--texto-principal);
   outline: none;
-  transition: border-color .18s ease, box-shadow .18s ease;
+  transition: border-color .18s ease, box-shadow .18s ease, opacity .18s ease;
 }
 
 .contact-form textarea{
@@ -119,11 +118,51 @@
   box-shadow: 0 0 0 4px rgba(95,127,99,0.12);
 }
 
-/* El botón ya es .btn.primary desde el HTML */
-/* Solo centrado opcional */
+/* Honeypot (anti-spam) oculto */
+.hp-field{
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* Botón full width (coherente con tu estilo) */
 .contact-form .btn{
   width: 100%;
   justify-content: center;
+}
+
+/* Estado "enviando" */
+.contact-form .btn.is-loading{
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+/* Mensajes de feedback */
+.form-feedback{
+  display: none;
+  margin-top: 14px;
+  padding: 14px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(95,127,99,0.18);
+  background: rgba(246,243,234,0.75);
+  color: var(--texto-secundario);
+  font-family: var(--fuente-texto);
+  line-height: 1.5;
+}
+
+.form-feedback.show{
+  display: block;
+}
+
+.form-feedback.success{
+  border-color: rgba(95,127,99,0.35);
+}
+
+.form-feedback.error{
+  border-color: rgba(180, 60, 60, 0.35);
+  background: rgba(255, 245, 245, 0.9);
 }
 
 /* ===================================================== */
@@ -170,7 +209,6 @@
 /* ===================================================== */
 /* FIN RESPONSIVE                                        */
 /* ===================================================== */
-
 
 /* ===================================================== */
 /* FIN CSS PÁGINA: contacto.html                         */
