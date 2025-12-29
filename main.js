@@ -1,36 +1,42 @@
-// ===================== HEADER INCLUDE ======================
-// Función: Inyecta header.html dentro de #header-placeholder
+// ===================== INCLUDES (HEADER + FOOTER) ======================
+// Función: Inyecta header.html y footer.html en sus placeholders.
 // Robusto para GitHub Pages (rutas relativas correctas).
 document.addEventListener("DOMContentLoaded", async () => {
-  const slot = document.getElementById("header-placeholder");
-  if (!slot) return;
+  const loadInclude = async (placeholderId, fileName) => {
+    const slot = document.getElementById(placeholderId);
+    if (!slot) return;
 
-  const tryFetch = async (url) => {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error("No se pudo cargar header.html");
-    return res.text();
-  };
+    const tryFetch = async (url) => {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`No se pudo cargar ${fileName}`);
+      return res.text();
+    };
 
-  try {
-    // 1) Intento principal (según URL actual)
-    const headerUrl = new URL("header.html", window.location.href).toString();
-    const html = await tryFetch(headerUrl);
-    slot.innerHTML = html;
-
-  } catch (err1) {
     try {
-      // 2) Fallback: mismo directorio (por si hay algún caso raro)
-      const html = await tryFetch("./header.html");
+      // 1) Intento principal (según URL actual)
+      const includeUrl = new URL(fileName, window.location.href).toString();
+      const html = await tryFetch(includeUrl);
       slot.innerHTML = html;
 
-    } catch (err2) {
-      console.error(err1);
-      console.error(err2);
-      slot.innerHTML = "<!-- Error cargando el header -->";
+    } catch (err1) {
+      try {
+        // 2) Fallback: mismo directorio
+        const html = await tryFetch(`./${fileName}`);
+        slot.innerHTML = html;
+
+      } catch (err2) {
+        console.error(err1);
+        console.error(err2);
+        slot.innerHTML = `<!-- Error cargando ${fileName} -->`;
+      }
     }
-  }
+  };
+
+  await loadInclude("header-placeholder", "header.html");
+  await loadInclude("footer-placeholder", "footer.html");
 });
-// =================== FIN HEADER INCLUDE ====================
+// =================== FIN INCLUDES ====================
+
 
 // ================= MODAL ADQUIRÍ TU PASE =================
 document.addEventListener("DOMContentLoaded", () => {
@@ -38,10 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal-pase");
   const cerrar = document.getElementById("cerrar-modal");
 
-  if (!btn || !modal || !cerrar) {
-    console.warn("Modal: faltan elementos (btn-pase / modal-pase / cerrar-modal)");
-    return;
-  }
+  // Si no existe el modal en esta página, no hacemos nada
+  if (!btn || !modal || !cerrar) return;
 
   const abrirModal = () => {
     modal.classList.add("show");
@@ -78,4 +82,3 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 // ===== FIN FORZAR SCROLL ARRIBA AL RECARGAR =====
-
