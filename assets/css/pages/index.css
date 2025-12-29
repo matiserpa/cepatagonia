@@ -1,6 +1,6 @@
 /* ===================================================== */
 /* CSS PÁGINA: index.html                                */
-/* Función: home / hero / video / faq                    */
+/* Función: home / hero / video / faq / footer           */
 /* ===================================================== */
 
 /* ===================================================== */
@@ -71,7 +71,7 @@
   text-shadow: 0 18px 40px rgba(0,0,0,0.45);
 }
 
-/* CONGRESO DE ESTÉTICA... (⬅ MÁS GRANDE Y PROTAGONISTA) */
+/* CONGRESO DE ESTÉTICA... */
 .hero-content h4{
   font-family: var(--fuente-texto);
   font-size: clamp(1.25rem, 2.4vw, 1.6rem);
@@ -300,6 +300,46 @@
 
   .faq-title{
     font-size: 1.7rem;
+  }
+}
+
+/* ===================================================== */
+/* FOOTER                                                */
+/* ===================================================== */
+
+/* Usá: <footer class="site-footer"> ... </footer> */
+.site-footer{
+  background: var(--verde-header);
+  color: #ffffff;
+  padding: 28px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.site-footer p{
+  margin: 0 0 8px;
+}
+
+.site-footer p:last-child{
+  margin-bottom: 0;
+}
+
+.site-footer a{
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.95;
+}
+
+.site-footer a:hover{
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .site-footer{
+    padding: 24px 16px;
+    margin-top: 45px;
   }
 }
 
